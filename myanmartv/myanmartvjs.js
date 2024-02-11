@@ -1,4 +1,4 @@
-const url = "https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/myanmartv/myanmartvm3u.html"
+const url = "https://xnxxlive.github.io/myanmartv/myanmartvm3u.js"
 fetch(url)
   .then((response) => {
   const urlData = response.json();
