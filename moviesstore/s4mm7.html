@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <title>Movie1</title>
+
+<style>
+
+  #pg{
+    color:blue;
+  }
+
+    .s4{ 
+                     display: block;
+              color: red;
+              font-size: 8px;
+              margin-top:-2px;
+
+            }
+
+
+              .ne{ 
+                     display: block;
+              color: #999;
+              font-size: 8px;
+              margin-top:-2px;
+
+            }
+
+
+    #aa{color:red;}
+
+              body { 
+  background-color:#ADD8E6;}
+
+
+
+  .container { 
+  font-weight: bold;  
+  width: 100px; 
+  height: 140px; 
+  position: relative;
+
+  } 
+
+
+  .card1 {
+          width: 90px;
+          height: 80px;
+        position: relative;
+          top:-1px;
+
+
+
+  }
+
+
+  span {
+          font-size: 9px;
+          color: #000000;
+          display:inline-block;
+          position: relative;
+          top:0px;
+  }			
+
+      figcaption{
+          text-align: center;
+  }		
+
+
+      .btn2 {
+      margin: 8px;    
+        font: bold 15px Arial; 
+        text-decoration: none; 
+      border-radius: 10px;    
+      text-transform: uppercase;
+      -webkit-transition: all 200ms linear;
+      transition: all 200ms linear;
+       padding: 0px; 
+      letter-spacing: 1px;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      text-align: center;
+      border: 3px solid #8098ff;
+      background-color: #ff;
+      color: #FFFF00;
+      box-shadow: 0 8px 24px 0 rgba(255, 235, 167, .2);
+      transition: 0.2s;
+
+
+    }
+
+    .btn2:active,
+    .btn2:focus,
+    .btn2:hover{
+     color:#FFA500 ;
+     box-shadow: 0 0 0.20em 0.20em rgba(255,255,255);
+     border: 3px solid gold;
+     outline: none;
+     transform: scale(1.07);
+    }
+
+          .container1 { 						
+   background-color: #fff; 
+   width: 100%; 
+   height: 55px; 
+   position: relative;
+   } 		
+
+    .right { 
+    background-color: #fff;
+    border-radius:10px;
+    position: absolute; 
+    top: 9px; 
+    right: 4px; 
+   padding: 2px;
+    } 
+
+    .left { 
+    color: #000;
+   background-color: #fff;
+    border: 0px dodgerblue solid; 
+   border-radius: 10px;
+   font-size: 30px;
+    position: absolute; 
+    top: 8px; 
+    left: 6px; 
+   padding: 2px;
+   outline: none;
+    } 
+
+    .text { 
+    font-size: 18px;
+   color: #000;
+   font-weight: 1000; 
+    position: absolute; 
+    top: 17px; 
+    left: 65px; 
+    } 
+
+       div.ex1 {
+    width: 100%;
+    height: 93vh;
+    overflow: scroll;
+  }							
+
+
+     <style>::-webkit-scrollbar{
+      display:none
+  }
+  *{
+      -ms-overflow-style:none;
+      scrollbar-width:none
+  }
+  body{
+      margin:0;
+      background:#95B9C7;
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.5;
+      color:white;
+      scroll-behavior:smooth;
+      text-align:center;
+  }
+  #player-wrapper{
+      width:100%;
+      z-index:999;
+  }
+  .sticky{
+      position:fixed;
+      top:0;
+      width:100%
+  }
+  #status{
+      position:fixed;
+      bottom:0;
+      right:0;
+      width:100%;
+      background:#fff;
+      display:none;
+  }
+  .col-sm-2{
+      border-radius:4px
+  }
+  .sp{
+      width:50%;
+      height:12px;
+      clear:both;
+      margin:20px auto
+  }
+  .sp-texture{
+      border:1px #000 solid;
+      border-radius:4px;
+      position:relative;
+      background:linear-gradient(45deg,transparent 49%,#000 50%,#000 50%,transparent 51%,transparent),linear-gradient(-45deg,transparent 49%,#000 50%,#000 50%,transparent 51%,transparent);
+      background-size:16px 16px;
+      background-position:0 0;
+      -webkit-animation:spTexture 1s infinite linear;
+      animation:spTexture 1s infinite linear;
+      color:#000;
+      text-align:center;
+      line-height:3em;
+      font-family:roboto
+  }
+  @-webkit-keyframes spTexture{
+      from{
+          background-position:0 0
+      }
+      to{
+          background-position:-16px 0
+      }
+  }
+  @keyframes spTexture{
+      from{
+          background-position:0 0
+      }
+      to{
+          background-position:-16px 0
+      }
+  }
+  .heading{
+      margin:5px auto;
+      text-align:center
+  }
+  #rmpPlayer{
+      z-index:999
+  }
+  .white{
+      color:#fff
+  }
+  .red{
+      color:red
+  }
+  .yellow{
+      color:#ffdd40
+  }
+  footer{
+      color:#fff;
+      text-align:center
+  }
+  footer p{
+      margin-bottom:20px;
+      margin-top:-10px
+  }
+  .animated{
+      font-family:sans;
+      margin:0;
+      padding:0;
+      font-size:25px;
+      background:url(https://upload.wikimedia.org/wikipedia/commons/3/3b/ColorRotateHr.gif) no-repeat;
+      background-clip:text;
+      -webkit-background-clip:text;
+      color:transparent;
+      animation:moveBg 40s linear infinite;
+      -webkit-animation:moveBg 40s linear infinite
+  }
+  @keyframes moveBg{
+      0%{
+          background-position:0 30%
+      }
+      100%{
+          background-position:100% 50%
+      }
+  }
+  .blink{
+      animation-name:blinker;
+      animation-duration:1s;
+      animation-timing-function:linear;
+      animation-iteration-count:infinite
+  }
+  @keyframes blinker{
+      0%{
+          opacity:1
+      }
+      50%{
+          opacity:0
+      }
+      100%{
+          opacity:1
+      }
+  }
+  *{
+      -webkit-touch-callout:none;
+      -webkit-user-select:none;
+      -khtml-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none
+  }
+  body{
+      background:#95B9C7!important;
+      overflow:hidden;
+      color:white;
+  }
+  .parent{
+      background:rgba(0,0,0,.9);
+      font-family:"Source Sans Pro",sans-serif;
+      margin:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      position:fixed;
+      top:0;
+      height:100%;
+      width:100%;
+      z-index:999999
+  }
+  .blobs-container{
+      display:flex
+  }
+  .blob img{
+      width:50%;
+      display:none;
+      margin:auto;
+      margin-top:25px
+  }
+  .loading{
+      color:#000;
+      display:block;
+      text-align:center;
+      position:relative;
+      top:30px;
+      left:-2px;
+      background:rgba(255,255,255,.9);
+      padding:0 10px;
+      border-radius:3px;
+      width:80%;
+      margin:auto;
+      font-size:10px
+  }
+
+  .print{height:65px;
+  width:65px;
+
+  border-radius:50px;
+  border:1.5px solid #f5f5f5;
+  padding:2px;
+      margin:3px;
+
+  }
+  .print:hover{height:90px;
+  width:90px;
+  border:2px solid red;
+  border-radius:5px;webkit-box-shadow: 0px 10px 0px 0px rgba(255,0,0,1);
+  -moz-box-shadow: 0px 10px 0px 0px rgba(255,0,0,1);
+  box-shadow: 0px 3px 20px 3px rgba(255,0,0,100);}
+  .print:active{height:65px;
+  width:65px;
+  border:2px solid red;
+  border-radius:5px;
+  webkit-box-shadow: 0px 10px 0px 0px rgba(0,255,0,1);
+  -moz-box-shadow: 0px 10px 0px 0px rgba(0,255,0,1);
+  box-shadow: 0px 3px 20px 3px rgba(0,255,0,100);}
+
+
+  marquee{
+  border-radius: 0px 0px 0px  0px;
+  width: 90%;
+  border:2px solid red;
+  margin: auto;
+     font-weight:bold;
+     color:#fff;
+  display: block;}
+
+  .marquee span{display: inline-block;
+   background: #ff0000;
+   border-radius:  0px 0px 0px 0px;
+    padding: 0px 10px;
+     color: #fff;
+     padding:2px;
+     font-weight:bold;
+      display: inline-block;
+       float: left;
+        width: auto;
+         line-height: 35px;}
+
+         .marquee marquee{display: block;
+          line-height: 35px;
+           z-index: -1; 
+           margin-right: 10px;
+            width: auto; 
+            margin: auto;}
+
+
+
+         .viewer{
+          display: flex;
+          width: 70px;
+          height: auto;
+          padding: 10px;
+          vertical-align: middle;
+        }
+
+
+            #count{display:flex;font-size:10pt;padding:1px 10px;width:90px;background:Red;border-radius:0px;}
+
+     .s22 {
+     {display: inline-block; display: inline;}
+     }       
+        #scc{display:inline-block;}   
+
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+
+  .next {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .round {
+    border-radius: 50%;
+  }
+
+
+  .search h1
+  {
+  letter-spacing: 3px;
+  display: inline-block;
+  border-bottom: 2px solid green;
+  padding-bottom: 10px;
+  font-size: 10px;
+  }
+
+  .search input
+  {
+
+
+  width: ;
+  height:30px;
+  margin:10px;
+  padding: 5px 16px;
+  background: transparent;
+  border: 2px solid #000;
+  font-size: 10px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  outline: none;
+  }
+
+
+  .search input::placeholder
+  {
+  color: #fff;
+  font-weight: 500;
+  }
+
+
+</style>
+
+<head>
+
+<body style="overflow: auto;">
+
+
+  <div id="aa"> <b> မြန်မာစာတန်းထိုး နိုင်ငံတကာ ရုပ်ရှင်ဇာတ်ကားများ</b></div>
+  <div id="pg"><center>Page (၇)
+</center>
+ <!--  
+   <img src="https://i.ibb.co/tqrk9qB/py9NwGj.png"   height="100px" width="300px">
+   </div>-->
+
+
+ <div class=""><span><i  style="font-size:26pt" aria-hidden="true"></i></span> <marquee scrollamount="5" direction="left" onmouseover="stop()" onmouseout="start()">အားပေးမှုအတွက်
+                အထူးကျေးဇူးတင်ရှိပါတယ်..... Video များအတွက် မူရင်းတင်ပေးသူများကို Credit ပေးပါတယ် ခင်ဗျာ..   </marquee> </div> 
+
+
+</head>
+        <div class="search">
+<input type="text" name="" id="find" placeholder="ရုပ်ရှင် ရှာရန်...." onkeyup="search()">
+</div>
+<body>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ProjectEerie23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/tw8o7cJEybMbaqu8kCeTcxBi5EZ-200x300.jpg" alt="">
+        <figcaption><span>Project Eerie</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/SusieSearches22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/m0KTbnNonhPVAEBxM3y5HvITuwT-202x300.jpg" alt="">
+        <figcaption><span>Susie Searches</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Myster/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1dKSmHU1EfDoOlj_c7MwQ-szOQcYoA3fh?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/PN7t4VL/Screenshot-11.png" alt="">
+        <figcaption><span>Sathiya Sothanai</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Comedy</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Chaaver/Chaaver.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/jtKAARhtxOyAwqibPxfNexWkIWO-200x300.jpg" alt="">
+        <figcaption><span>Chaaver </span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Thriller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/The%20Bodyguard/The%20Bodyguard.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/uVZSZOCsFOn74fK8q2yiQ9S5Ory-200x300.jpg" alt="">
+        <figcaption><span>The Bodyguard  </span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/The%20Cost/The%20Cost.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/xmfzhpIaMFACcDXi3mWjUy7ARI-200x300.jpg" alt="">
+        <figcaption><span>The Cost </span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Thriller</i>
+      <i class="ne">Austrila</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/The%20Quantum%20Devil/The%20Quantum%20Devil.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/9OQG9KPo7H1NO17xFo86a95UC3U-200x300.jpg" alt="">
+        <figcaption><span>The Quantum Devil</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">Serbia</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Leo%20Temple/Leo.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/n3OIJwNwhHea6CbZOmGRc6OCqDk-200x300.jpg" alt="">
+        <figcaption><span>Leo</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Crime/Thtiller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Project%20Eerie/Project%20Eerie.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/tw8o7cJEybMbaqu8kCeTcxBi5EZ-200x300.jpg" alt="">
+        <figcaption><span>Project Eerie</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Susie%20Searches/Susie%20Searches.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/m0KTbnNonhPVAEBxM3y5HvITuwT-202x300.jpg" alt="">
+        <figcaption><span>Susie Searches</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Myster/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BhagavanthKesari23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/W2VcGMG/Screenshot-1.png" alt="">
+        <figcaption><span>Bhagavanth Kesari</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Drama/Thriller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheSniper23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/JvYfZxz/Screenshot-5.png" alt="">
+        <figcaption><span>The Sniper</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Drama/Horror</i>
+      <i class="ne">cHINA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Carrie/Carrie.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/uc3OvgmbnYaS5Y0BOjSmC1EmSz1-200x300.jpg" alt="">
+        <figcaption><span>Carrie </span> </figcaption>
+      <i class="ne">1976</i>
+      <i class="ne">Horror</i>
+      <i class="ne">UsA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Hells%20Coming%20For%20You/Hells%20Coming%20For%20You.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/vSPISqxlnOZV6tEr707N6voIwb1-200x300.jpg" alt="">
+        <figcaption><span>Hell’s Coming for You </span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">UsA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Where%20The%20Devil%20Roams/Where%20The%20Devil%20Roams.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/tm4CuCFUmIHXO6DtMl1gg2s0Ipq-203x300.jpg" alt="">
+        <figcaption><span>Where the Devil Roams </span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">UsA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Dreamgirls/Dreamgirls.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/sG5JyOj8Spe13QkNJMH8b5kzQUh-200x300.jpg" alt="">
+        <figcaption><span>Dreamgirls</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama</i>
+      <i class="ne">UsA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Higuita%20El%20Camino%20Del%20Escorpion/Higuita%20El%20Camino%20Del%20Escorpion.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/oXrlGiQ6ghjN25rMPmlKeGe0gNm-200x300.jpg" alt="">
+        <figcaption><span>Higuita: The Way of the Scorpion</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Documentary</i>
+      <i class="ne">Colombia</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Squealer/Squealer.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/wdNdrqVJgkNNuYbI11TiiYkuP7Q-200x300.jpg" alt="">
+        <figcaption><span>Squealer</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horroe/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Satanic%20Hispanics/Satanic%20Hispanics.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/8oRsWDVKBiLE7laQLH6uwgmKioE-200x300.jpg" alt="">
+        <figcaption><span>Satanic Hispanics</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horroe/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Please%20Dont%20Destroy%20The%20Treasure%20of%20Foggy%20Mountain/Please%20Dont%20Destroy%20The%20Treasure%20of%20Foggy%20Mountain.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/2WSTjQNamyMoy3kFDemd1os8TNz-200x300.jpg" alt="">
+        <figcaption><span>Please Don’t Destroy</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Adventure</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Hadik/Hadik.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/eq3TXqM9hp09plol2F4fdiNoemb-199x300.jpg" alt="">
+        <figcaption><span>Hadik</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Adventure</i>
+      <i class="ne">Hungary</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Arya%202/Arya%202.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/kjbbx8kV6pNhNXX9aRsVDwyEJbm-200x300.jpg" alt="">
+        <figcaption><span>Aarya 2 </span> </figcaption>
+      <i class="ne">2009</i>
+      <i class="ne">Action/Comedy</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Cast%20Away/Cast%20Away.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2022/08/ydtGc9GXq0XGKozNOs0kmzfuuBm-200x300.jpg" alt="">
+        <figcaption><span>Cast Away </span> </figcaption>
+      <i class="ne">2000</i>
+      <i class="ne">Adventure/Drama</i>
+      <i class="ne">UK</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/The%20Puppetman/The%20Puppetman.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/wEnct8jeMHYzOfm5Y6QmxD3V61t-200x300.jpg" alt="">
+        <figcaption><span>The Puppetman </span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">UK</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/The%20Devil%20On%20Trial/The%20Devil%20On%20Trial.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/10/qqPIhVKPHePyGqQxbo4gpznsJsA-200x300.jpg" alt="">
+        <figcaption><span>The Devil on Trial </span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Crime/Documentary</i>
+      <i class="ne">UK</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Freddys%20Fridays/Freddys%20Fridays.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/8smsOtjp8FbBgL8YKrgCADJWEhe-200x300.jpg" alt="">
+        <figcaption><span>Freddy’s Fridays </span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">HORROR</i>
+      <i class="ne">UK</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/The%20Fury%20Of%20A%20Patient%20Man/The%20Fury%20Of%20A%20Patient%20Man.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/t2eyq20mFve0M0h3ocQWgdG6iB-200x300.jpg" alt="">
+        <figcaption><span>The Fury of a Patient Man</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">THRILLER</i>
+      <i class="ne">SPAIN</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Marlina%20The%20Murderer%20In%20Four%20Acts/Marlina%20The%20Murderer%20In%20Four%20Acts.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/7pDpym7ix9dsB9a1KWVLN95X4z1-200x300.jpg" alt="">
+        <figcaption><span>Marlina the Murderer in Four Acts</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">DRAMA/THRILLER</i>
+      <i class="ne">INDONESIA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Samara/Samara.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/uZvlX7ZpsLtBxvgchB9cY3lFG9e-200x300.jpg" alt="">
+        <figcaption><span>Samara</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Science Fiction/Thriller</i>
+      <i class="ne">india</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Quick%20CounterAttack/Quick%20CounterAttack.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/em4UK3ECROeUemsYi3VyAklRzjk-200x300.jpg" alt="">
+        <figcaption><span>Quick Counterattack</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Crime</i>
+      <i class="ne">CHINA</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Hopeless23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/GCzkjBx/Screenshot-16.png" alt="">
+        <figcaption><span>Hopeless</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Crime/Drama</i>
+      <i class="ne">South Kore</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/RaceToTheSummit23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/KsPQKJQ/Screenshot-15.png" alt="">
+        <figcaption><span> Race to the Summit</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Adventure/Sport</i>
+      <i class="ne">Germany</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/HotPursuit15/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/0V9197V/Screenshot-14.png" alt="">
+        <figcaption><span> Hot Pursuit</span> </figcaption>
+      <i class="ne">2015</i>
+      <i class="ne">Action/Comedy</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ChatrapathiForthePeople23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/BKqcqTZ/Screenshot-13.png" alt="">
+        <figcaption><span> Chatrapathi</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Drama</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Kasargold23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/d5L6KzJ/Screenshot-12.png" alt="">
+        <figcaption><span> Kasargold</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Thriller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Mistake23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/dP61zBc/Screenshot-11.png" alt="">
+        <figcaption><span> Mistake</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Thriller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/3DaysInMalay23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/h13Zqpy/Screenshot-10.png" alt="">
+        <figcaption><span> 3 Days in Malay</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/History/War</i>
+      <i class="ne">Usa</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/HauntedMansion23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/gr1WjhM/Screenshot-9.png" alt="">
+        <figcaption><span>Haunted Mansion</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Romance</i>
+      <i class="ne">Usa</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/OnceUponAStar23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/D8RFkMB/Screenshot-8.png" alt="">
+        <figcaption><span>Once Upon a Star</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Comedy/Drama/Romance</i>
+      <i class="ne">Usa</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1fQBKGftvohEbhI8may6qQNGjwrvaWEDh?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/5jLfpty/MV5-BMj-I1-MTA5-Mz-M2-MF5-BMl5-Ban-Bn-Xk-Ft-ZTgw-Njk2-MDgw-Mj-E-V1.jpg" alt="">
+        <figcaption><span>Mardaani</span> </figcaption>
+      <i class="ne">2014</i>
+      <i class="ne">Action/Crime/thriller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Tainted%20Love/Tainted%20Love.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/3Gzi2aqgnSYIwasdIKoKfPCONM1-200x300.jpg" alt="">
+        <figcaption><span>Tainted Love</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Crime/Mystery</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Tales%20from%20the%20Occult%20Ultimate%20Malevolence/Tales%20from%20the%20Occult%20Ultimate%20Malevolence.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/4g9eJJOSNAoRDpn5yXbzmQ1VmVd-200x300.jpg" alt="">
+        <figcaption><span>Tales from the Occult</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror/Mystery</i>
+      <i class="ne">Hong Kong</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Angel%20Whispers/Angel%20Whispers.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/aRfwE66JTE6OnYm0E8NwLBjxb0w-200x300.jpg" alt="">
+        <figcaption><span>Angel Whispers</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">(18+)Horror/Thriller</i>
+      <i class="ne">Hong Kong</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BurningBetrayal23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/st1JCWF/Screenshot-12.png" alt="">
+        <figcaption><span>Burning Betrayal</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Mystery</i>
+      <i class="ne">bRAZIL</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Shrapnel23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/jkFBhsD/Screenshot-11.png" alt="">
+        <figcaption><span>Shrapnel</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Rangoli23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/jM4DMz1/Screenshot-10.png" alt="">
+        <figcaption><span>Rangoli</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Family</i>
+      <i class="ne">INDIA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BooAMadeaHalloween16/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/7z0JJrD/Screenshot-9.png" alt="">
+        <figcaption><span>Boo! A Madea Halloween</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Thriller</i>
+      <i class="ne">
+        Hong Kong</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Territory23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/sRFPc8k/Screenshot-7.png" alt="">
+        <figcaption><span>Territory</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Crime/Drama/Thriller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BadBoysII03/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/1X7tjh4/Screenshot-14.png" alt="">
+        <figcaption><span>Bad Boys II</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Comedy/Crime</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/SmokinAces06/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/dj8tQDp/Screenshot-13.png" alt="">
+        <figcaption><span>Smokin’ Aces</span> </figcaption>
+      <i class="ne">2007</i>
+      <i class="ne">Action/Comedy/Crime</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TastesofHorror23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/hF9TcjC/Screenshot-12.png" alt="">
+        <figcaption><span>Tastes of Horror</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror/Mystery</i>
+      <i class="ne">South Korea</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BoilerRoom00/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/8NVK51L/Screenshot-10.png" alt="">
+        <figcaption><span>Boiler Room</span> </figcaption>
+      <i class="ne">2000</i>
+      <i class="ne">Action/Drama/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BillyLynnsLongHalftimeWalk16/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/pxbZJfY/Screenshot-9.png" alt="">
+        <figcaption><span>Billy Lynn’s Long Halftime Walk</span> </figcaption>
+      <i class="ne">2016</i>
+      <i class="ne">ActionDramaSport</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Toro16/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/nPqQY75/Screenshot-8.png" alt="">
+        <figcaption><span>Toro</span> </figcaption>
+      <i class="ne">2016</i>
+      <i class="ne">Action/Crime/Drama</i>
+      <i class="ne">Spain</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Thunder23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/yQL6J53/Screenshot-6.png" alt="">
+        <figcaption><span>Thunder</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama</i>
+      <i class="ne">
+        Switzerlan</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Manodrome23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/SvsNLRH/Screenshot-5.png" alt="">
+        <figcaption><span>Manodrome</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BraveCitizen23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/F8BcWSF/Screenshot-4.png" alt="">
+        <figcaption><span>Brave Citizen</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">ActionComedyDrama</i>
+      <i class="ne">South Korea</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Bhoothnath08/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/w7GLBPq/Screenshot-3.png" alt="">
+        <figcaption><span>Bhoothnath</span> </figcaption>
+      <i class="ne">2008</i>
+      <i class="ne">Comedy/Drama/Fantasy</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheSeaOfTrees15/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/ZN4z8Hp/Screenshot-2.png" alt="">
+        <figcaption><span>The Sea of Trees</span> </figcaption>
+      <i class="ne">2016</i>
+      <i class="ne">Drama/Fantasy/Mystery</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/Tantiram/Tantiram.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/zNV7bfD/Screenshot-7.png" alt="">
+        <figcaption><span>Tantiram Chapter 1: Tales of Sivakasi</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Fantasy/Horror/Mystery</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Sukhee23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/mvT2fjC/Screenshot-5.png" alt="">
+        <figcaption><span>Sukhee</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">DRAMA</i>
+      <i class="ne">iNDIA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1feXrLM3rYy_xmaxYkkgQcOiprIEizeMK?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/TYyn93G/Screenshot-1.png" alt="">
+        <figcaption><span>Snaker In Golden</span> </figcaption>
+      <i class="ne">ခေါင်းကိုးလုံးရွှေမြွေမိစ္ဆာ</i>
+      <i class="ne">Action</i>
+      <i class="ne">2023/China</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ParanormalActivity210/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/NW33Qm9/Screenshot-9.png" alt="">
+        <figcaption><span>Paranormal Activity 2</span> </figcaption>
+      <i class="ne">2010</i>
+      <i class="ne">Horror/Mysteryr</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/YourLuckyDay23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/qWXFZBW/Screenshot-8.png" alt="">
+        <figcaption><span>Your Lucky Day</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheGreatIndianFamily23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/VHVnb1G/Screenshot-7.png" alt="">
+        <figcaption><span>The Great Indian Family</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Fantasy</i>
+      <i class="ne">Indonesia</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/PerjanjianGaib23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/M1rzjzH/Screenshot-6.png" alt="">
+        <figcaption><span>Perjanjian Gaib</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Horror</i>
+      <i class="ne">Indonesia</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/WaitingForForever10/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/kJTjDTD/Screenshot-5.png" alt="">
+        <figcaption><span>Waiting for Forever</span> </figcaption>
+      <i class="ne">2010</i>
+      <i class="ne">Comedy/Drama/Romance</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/WouldYouKillForThMary23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/RbXftqL/Screenshot-3.png" alt="">
+        <figcaption><span>Would You Kill for Me?</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama</i>
+      <i class="ne">Canada</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BlackNoise23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/ZcpLvLP/Screenshot-2.png" alt="">
+        <figcaption><span>Black Noise</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Sci-Fir</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesThree/The%20Love%20Story/The%20Love%20Story.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/11/eYWSpzMBTAV0spzFfKXekyXNW1y-200x300.jpg" alt="">
+        <figcaption><span>The Love Story</span> </figcaption>
+      <i class="ne">2012</i>
+      <i class="ne">Comedy/Romance</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/JuanOfThe11/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/JdLRJzf/Screenshot-11.png" alt="">
+        <figcaption><span>Juan of the Dead</span> </figcaption>
+      <i class="ne">2012</i>
+      <i class="ne">Action/Horror</i>
+      <i class="ne">Spain</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/BurningDays22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/QnNZmQ2/Screenshot-10.png" alt="">
+        <figcaption><span>Burning Days</span> </figcaption>
+      <i class="ne">2022</i>
+      <i class="ne">Drama/hriller</i>
+      <i class="ne">Turkey</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ThinIce11/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/r7pJFSR/Screenshot-9.png" alt="">
+        <figcaption><span>Thin Ice</span> </figcaption>
+      <i class="ne">2011</i>
+      <i class="ne">Comedy/Crime/Drama</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/OldSchool03/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/jJS37QJ/Screenshot-8.png" alt="">
+        <figcaption><span>Old School</span> </figcaption>
+      <i class="ne">2003</i>
+      <i class="ne">Comedy</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheProtector85/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/VxbRxk6/Screenshot-7.png" alt="">
+        <figcaption><span>The Protector</span> </figcaption>
+      <i class="ne">1985</i>
+      <i class="ne">Action/Crime/Thriller</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheInterpreter05/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/C65PfXT/Screenshot-6.png" alt="">
+        <figcaption><span>The Interpreter</span> </figcaption>
+      <i class="ne">2005</i>
+      <i class="ne">Crime/Mystery/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/KickAss2/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/Q6bxH6c/Screenshot-5.png" alt="">
+        <figcaption><span>Kick-Ass 2</span> </figcaption>
+      <i class="ne">2013</i>
+      <i class="ne">Action/Comedy/Crime</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheAdventuresofPlutoNash02/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/4JmCfHK/Screenshot-4.png" alt="">
+        <figcaption><span>The Adventures of Pluto Nash</span> </figcaption>
+      <i class="ne">2002</i>
+      <i class="ne">Action/Adventure/Sci-Fir</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Baskin15/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/M27FPCC/Screenshot-1.png" alt="">
+        <figcaption><span>Baskin</span> </figcaption>
+      <i class="ne">2015</i>
+      <i class="ne">Crime/Sci-Fi/Horrorr</i>
+      <i class="ne">Turkey</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/MurderRunsInTheFamily23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/pxhPLbC/Screenshot-2.png" alt="">
+        <figcaption><span>Murder Runs in the Family</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Dramar</i>
+      <i class="ne">
+        Canada</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/164g1SJmrjuVrQ0kdjEU8wJEwN3pWJVCL?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/fDbSLH9/Screenshot-4.jpg" alt="">
+        <figcaption><span>Kannur Squad</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Crime/Dramar</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(HD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/VendettaRoad23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/Mc32QhS/Screenshot-26.png" alt="">
+        <figcaption><span>Vendetta Road</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Sly23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/M8SrxQS/Screenshot-25.png" alt="">
+        <figcaption><span>Sly</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Biographyr</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Ghost23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/02vmgcL/Screenshot-24.png" alt="">
+        <figcaption><span>Ghost</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Thrillerr</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/RedRooms23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/CnLdgKw/Screenshot-23.png" alt="">
+        <figcaption><span>Red Rooms</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Thriller</i>
+      <i class="ne">Canada</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Believer223/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/HYB9BPx/Screenshot-22.png" alt="">
+        <figcaption><span>Believer 2</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Comedy/Romance</i>
+      <i class="ne">
+        South Kore</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/MISSFORTUNE23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/Wz9Jn9s/Screenshot-21.png" alt="">
+        <figcaption><span>Miss Fortune</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Comedy/Romance</i>
+      <i class="ne">
+        South Kore</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TigerNageswaraRao23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/XDfkvqh/Screenshot-20.png" alt="">
+        <figcaption><span>Tiger Nageswara Rao</span> </figcaption>
+      <i class="ne">2022</i>
+      <i class="ne">Action/Crime/Drama</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Hellaro19/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/rptDFpw/Screenshot-19.png" alt="">
+        <figcaption><span>Hellaro</span> </figcaption>
+      <i class="ne">2019</i>
+      <i class="ne">Drama</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/15Cameras23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/BwH8tyR/Screenshot-18.png" alt="">
+        <figcaption><span>15 Cameras</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/PaanSinghTomar2012/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/JB8zLQV/Screenshot-17.png" alt="">
+        <figcaption><span>Paan Singh Toma</span> </figcaption>
+      <i class="ne">2012</i>
+      <i class="ne">Action/Biography/Crime</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TamilKudimagan23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/y44R7GP/Screenshot-16.png" alt="">
+        <figcaption><span>Tamil Kudimagan</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Mad23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/wdv6gzZ/Screenshot-15.png" alt="">
+        <figcaption><span>MAD</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Comedy</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/DominionPrequelToTheExorcist05/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/ZSmjpqR/Screenshot-14.png" alt="">
+        <figcaption><span>Dominion: Prequel to The Exorcist</span> </figcaption>
+      <i class="ne">2005</i>
+      <i class="ne">Horror/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheCorruptor99/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/rmFsQxV/Screenshot-13.png" alt="">
+        <figcaption><span>The Corruptor</span> </figcaption>
+      <i class="ne">1999</i>
+      <i class="ne">Action/Crime/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/CheckinItTwice23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/vxQTQFy/Screenshot-12.png" alt="">
+        <figcaption><span>Checkin’ It Twice</span> </figcaption>
+      <i class="ne">2010</i>
+      <i class="ne">Action/Crime/Sci-Fi</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/NobodyButYou23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/FsGt5cR/Screenshot-11.png" alt="">
+        <figcaption><span>Nobody But You</span> </figcaption>
+      <i class="ne">2010</i>
+      <i class="ne">Action/Crime/Sci-Fi</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/DearMrGacy10/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/yhXvZJy/Screenshot-10.png" alt="">
+        <figcaption><span>Dear Mr. Gacy</span> </figcaption>
+      <i class="ne">2010</i>
+      <i class="ne">Crime/Drama/Thriller</i>
+      <i class="ne">
+      Canada</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ExMachina15/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/M6p6bG0/Screenshot-9.png" alt="">
+        <figcaption><span>Ex Machina</span> </figcaption>
+      <i class="ne">2015</i>
+      <i class="ne">Drama/Sci-Fi/Thriller</i>
+      <i class="ne">UK</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/NuovoOlimpo23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/MP8zT7Q/Screenshot-8.png" alt="">
+        <figcaption><span>Nuovo Olimpo</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/omance</i>
+      <i class="ne">Italy</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ControlZeta23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/Sd1HSpw/Screenshot-7.png" alt="">
+        <figcaption><span>Control Zeta</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Crime/Sci-Fi</i>
+      <i class="ne">Argentina</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Oracle23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/5K360Gp/Screenshot-6.png" alt="">
+        <figcaption><span>Oracle</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/MoonStudents23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/5Ynj7Wp/Screenshot-5.png" alt="">
+        <figcaption><span>Moon Students</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Adventure</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/MoonGarden22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/3TkPc8S/Screenshot-2.png" alt="">
+        <figcaption><span>Moon Garden</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Fantasy/Horror</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/KadaisiVivasayi21/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/N6wjSYV/Screenshot-4.png" alt="">
+        <figcaption><span>Kadaisi Vivasayi</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/KnuckleGirl23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/RS9msds/Screenshot-3.png" alt="">
+        <figcaption><span>Knuckle Girl</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Crime/Sci-Fi</i>
+      <i class="ne">Japan</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/68.Kill17/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/jG5zCbX/Screenshot-4.png" alt="">
+        <figcaption><span>68 Kill</span> </figcaption>
+      <i class="ne">2017</i>
+      <i class="ne">Comedy/Crime/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Nikamma22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/nkN47sW/Screenshot-3.png" alt="">
+        <figcaption><span>Nikamma</span> </figcaption>
+      <i class="ne">2022</i>
+      <i class="ne">Action/Comedy/Drama</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/CongratsMyEx23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/fMPmtPP/Screenshot-2.png" alt="">
+        <figcaption><span>Congrats My Ex!</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Comedy/Romance</i>
+      <i class="ne">Thailand</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ReBroken23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/QnHZBSg/Screenshot-1.png" alt="">
+        <figcaption><span>ReBroken</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Horror/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/NationalSecretAgent23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/M2cqdkz/Screenshot-8.png" alt="">
+        <figcaption><span>National Secret Agent</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/QuanDaoTheJourneyofaBoxer20/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/FbSVzBh/Screenshot-7.png" alt="">
+        <figcaption><span>Quan Dao: The Journey of a Boxer</span> </figcaption>
+      <i class="ne">2020</i>
+      <i class="ne">Action/Drama</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/YoureNotSupposedToBeHere23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/F3zZDvB/Screenshot-6.png" alt="">
+        <figcaption><span>You’re Not Supposed to Be Here</span> </figcaption>
+      <i class="ne">2015</i>
+      <i class="ne">Thrillerr</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/NaanKadavulIllai23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/BwmSk59/Screenshot-5.png" alt="">
+        <figcaption><span>Naan Kadavul Illai</span> </figcaption>
+      <i class="ne">2015</i>
+      <i class="ne">Dramar</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ItFollows14/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/Jcwmdkh/Screenshot-3.png" alt="">
+        <figcaption><span>It Follows</span> </figcaption>
+      <i class="ne">2015</i>
+      <i class="ne">Horror/Mystery/Thriller</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Dieced23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/m5zc8cP/Screenshot-2.png" alt="">
+        <figcaption><span>Die’ced</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Horror</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheLastMage23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/TbkrGwD/Screenshot-1.png" alt="">
+        <figcaption><span>The Last Mage</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Thriller</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Apurva23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/jgnwbKm/Screenshot-4.png" alt="">
+        <figcaption><span>Apurva</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Thriller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/MadMax79/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/Vtdz9WM/Screenshot-3.jpg" alt="">
+        <figcaption><span>Mad Max</span> </figcaption>
+      <i class="ne">1979</i>
+      <i class="ne">Action/Adventure/Sci-Fi</i>
+      <i class="ne">Australia</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TenYearsOfLovingYou22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/J3qbZDQ/Screenshot-2.jpg" alt="">
+        <figcaption><span>Ten Years of Loving You</span> </figcaption>
+      <i class="ne">2022</i>
+      <i class="ne">Drama/Romance</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/RedPaperCrane22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/K5y6fbz/Screenshot-24.png" alt="">
+        <figcaption><span>Red Paper Crane</span> </figcaption>
+      <i class="ne">2022</i>
+      <i class="ne">Crime/Mystery</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TaintedLove23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/FDbLLYJ/Screenshot-23.png" alt="">
+        <figcaption><span>Tainted Love</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Crime/Mystery</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheC14/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/pQN6HfW/Screenshot-22.png" alt="">
+        <figcaption><span>The Canal</span> </figcaption>
+      <i class="ne">2014</i>
+      <i class="ne">Drama/Horror/Mystery</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Ardh22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/syCcN2r/Screenshot-21.png" alt="">
+        <figcaption><span>Ardh</span> </figcaption>
+      <i class="ne">2022</i>
+      <i class="ne">Drama/Romance</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TakeShelter11/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/WgzkrFp/Screenshot-20.png" alt="">
+        <figcaption><span>Take Shelter</span> </figcaption>
+      <i class="ne">2011</i>
+      <i class="ne">Drama/Romance/Sci-Fi</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Fingernails23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/0G2fzLY/Screenshot-19.png" alt="">
+        <figcaption><span>Fingernails</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Drama/Romance/Sci-Fi</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Fearless22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/LhNK5vC/Screenshot-18.png" alt="">
+        <figcaption><span>Fearless</span> </figcaption>
+      <i class="ne">2021</i>
+      <i class="ne">Crime/Drama</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheCreator23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/sVV3px6/Screenshot-17.png" alt="">
+        <figcaption><span>The Imperial Cat</span> </figcaption>
+      <i class="ne">2021</i>
+      <i class="ne">Action/Mystery</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheCreator23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/KVpzfh2/Screenshot-16.png" alt="">
+        <figcaption><span>The Creator</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Adventure/Drama</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/AGuiltyConscience23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/Z24kNgM/Screenshot-12.png" alt="">
+        <figcaption><span>A Guilty Conscience</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Crime/Drama</i>
+      <i class="ne">China</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/Maanagaram17/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/VMhbry4/Screenshot-11.png" alt="">
+        <figcaption><span>Maanagaram</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Action/Thriller</i>
+      <i class="ne">India</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/TheWeddingVeilJourney23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/vjJ1XvZ/Screenshot-10.png" alt="">
+        <figcaption><span>The Wedding Veil Journey</span> </figcaption>
+      <i class="ne">2023</i>
+      <i class="ne">Comedy/Romance</i>
+      <i class="ne">USA</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+  <button onclick="window.location.href='intent://www.zegomovie.com/Videos/ProjectA287/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+    class="btn2 mt-4"><div class="container"><img class="card1" src="https://i.ibb.co/C5fTV3t/Screenshot-9.png" alt="">
+        <figcaption><span>Project A: Part II</span> </figcaption>
+      <i class="ne">1987</i>
+      <i class="ne">Action/Comedy/Crime</i>
+      <i class="ne">Hong Kong</i>
+      <i class="s4">S4MM-TV(SD)</i></div></button>
+
+
+
+
+</br>
+
+
+
+
+<!--
+
+<a href="https://main.morningsun2.repl.co/" class="next">&laquo;Home သို့ </a>-->
+   <a href="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/moviesstore/s4mm8.html" class="next">Back &raquo;</a>
+   <a href="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/moviesstore/s4mm6.html" class="next">Next &raquo;</a><!--
+   <a href="Int'l Movie5.html" class="next">PAGE (၅) သို့ &raquo;</a>
+   <a href="Int'l movie4.html" class="next">PAGE (၄) သို့ &raquo;</a>
+ <a href="Int'l movie3.html" class="next">PAGE (၃) သို့ &raquo;</a>
+    <a href="Int'l movie2 .html" class="next">PAGE (၂) သို့ &raquo;</a>
+   <a href="Int'l movie1.html" class="next">PAGE (၁) သို့ &raquo;</a>-->
+
+
+</body>
+
+
+              <!-- javascript -
+    <script type="text/javascript">
+    function search() {
+    let filter = document.getElementById('find').value.toUpperCase();
+    let item = document.querySelectorAll('.container');
+    let l = document.getElementsByTagName('span');
+    for(var i = 0;i<=l.length;i++){
+    let a=item[i].getElementsByTagName('span')[0];
+    let value=a.innerHTML || a.innerText || a.textContent;
+    if(value.toUpperCase().indexOf(filter) > -1) {
+    item[i].style.display="";
+    }
+    else
+    {
+    item[i].style.display="none";
+    }
+    }
+    }
+
+        </script>
+
+</html>
+

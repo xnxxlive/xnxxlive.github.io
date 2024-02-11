@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<head>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/PSsmiley.png/2560px-PSsmiley.png" type="image/png" sizes="48x48">
+    <meta charset="UTF-8">
+    <title>စူပါပါဝါ SPORTS LINK</title>
+    <meta content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1" name="viewport">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script disable-devtool-auto='true' src='https://cdn.jsdelivr.net/npm/disable-devtool' clear-log='true' disable-select='true' disable-copy='true' disable-cut='true' disable-paste='true'></script>
+    <script src="/sec/prodevs.js"></script>
+    <style>
+        .loading {
+            margin-top: 0;
+            font-weight: 700;
+            vertical-align: middle;
+            line-height: 250px;
+            font-size: 25px;
+            text-transform: uppercase;
+            background: linear-gradient(to right, red 30%, rgb(10, 60, 215) 75%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            background-color: #000;
+            margin: 0;
+            text-align: center;
+            padding: 5px
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none
+        }
+
+        tr th {
+            font-tvv-name: bold;
+            background-color: green;
+            padding: 1px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0
+            }
+
+            66% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes fadein {
+            0% {
+                opacity: 0
+            }
+
+            66% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+
+        .tvv-item {
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            height: 150px;
+            margin: 3px;
+            padding: 10px;
+            border: 1px solid green z-index: 1;
+            background: White;
+            box-shadow: 3px 2px 2px black;
+            overflow: hidden;
+            border-radius: 4px;
+            filter: contrast(100%)
+        }
+
+        .tvv-item>* {
+            margin: 0px;
+            padding: 0
+        }
+
+        .tvv-item .tvv-thumb {
+            width: 100%;
+            bottom: 10px;
+            top: 0px;
+            position: absolute;
+            right: 0;
+            float: center;
+        }
+
+        .tvv-item .tvv-thumb img {
+            width: 100%;
+            pointer-events: none
+        }
+
+        .tvv-item .tvv-name {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            font-size: 15px;
+            display: block;
+            text-align: center;
+            width: 100%;
+            color: black;
+            padding: 5px;
+            font-weight: 1000;
+            text-overflow: ellipsis;
+            black-space: nowrap;
+            overflow: hidden;
+            background: linear-gradient(to bottom left, #32c0cc 20%, #ffffff 100%);
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5);
+            7px 7px 20px 0px rgba(0, 0, 0, .1),
+            4px 4px 5px 0px rgba(0, 0, 0, .1);
+            transition: all 0.3s ease;
+        }
+
+        .tvv-item img {
+            width: 100%;
+            pointer-events: none
+        }
+
+        .tvv-item:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0;
+            top:  0;
+            left: 0;
+            z-index: -1;
+            border-radius: 7px;
+            border: 0px solid green;
+            background-color: black;
+            background-image: linear-gradient(to bottom left, #32c0cc 20%, #fff 100%);
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5);
+            7px 7px 20px 0px rgba(0, 0, 0, .1),
+            4px 4px 5px 0px rgba(0, 0, 0, .1);
+            transition: all 0.3s ease;
+        }
+
+        .tvv-item:hover {
+            color: #000;
+        }
+
+        .tvv-item:hover:after {
+            top: auto;
+            bottom: 0;
+            height: 100%;
+        }
+
+        .tvv-item:active {
+            top: 10px;
+        }
+
+        .tvv-name:hover {}
+
+        .fin {
+            width: 100%;
+            margin-top: 1px;
+            margin-bottom: 2px;
+            float: center;
+            height: 30px;
+            font-size: small;
+            background-color: rgb(40, 40, 40);
+            color: black;
+            border-radius: 10px;
+            border: 3px solid greenoutline: none;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .fin,
+        .dftr {
+            width: 100%;
+            margin-top: 1px;
+            margin-bottom: 2px;
+            float: center;
+            height: 30px;
+            font-style: bold;
+            background-color: rgb(40, 40, 40);
+            color: purple;
+            background: linear-gradient(135deg, snow 0%, seashell 64%);
+            border-radius: 0px;
+            border: 2px solid red;
+            outline: none;
+            text-align: center;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .fin:hover,
+        .dftr:hover {
+            border: 3px solid rgb(255, 60, 140);
+            color: red;
+            background: linear-gradient(135deg, azure 0%, floralwhite 64%);
+        }
+
+        .tvv-item {
+            width: calc(100%/20 - 10px)
+        }
+        }
+
+        @media only screen and (max-width:2600px) {
+            .tvv-item {
+                width: calc(100%/19 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:2470px) {
+            .tvv-item {
+                width: calc(100%/18 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:2340px) {
+            .tvv-item {
+                width: calc(100%/17 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:2210px) {
+            .tvv-item {
+                width: calc(100%/16 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:2080px) {
+            .tvv-item {
+                width: calc(100%/15 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:1950px) {
+            .tvv-item {
+                width: calc(100%/14 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:1820px) {
+            .tvv-item {
+                width: calc(100%/13 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:1690px) {
+            .tvv-item {
+                width: calc(100%/12 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:1560px) {
+            .tvv-item {
+                width: calc(100%/11 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:1430px) {
+            .tvv-item {
+                width: calc(100%/10 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:1300px) {
+            .tvv-item {
+                width: calc(100%/9 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:1170px) {
+            .tvv-item {
+                width: calc(100%/8 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:1040px) {
+            .tvv-item {
+                width: calc(100%/7 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:910px) {
+            .tvv-item {
+                width: calc(100%/6 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:780px) {
+            .tvv-item {
+                width: calc(100%/5 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:650px) {
+            .tvv-item {
+                width: calc(100%/4 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:520px) {
+            .tvv-item {
+                width: calc(100%/3 - 10px)
+            }
+        }
+
+        @media only screen and (max-width:390px) {
+            .tvv-item {
+                width: calc(100%/2 - 10px)
+            }
+        }
+
+        .custom-btn {
+            width: 130px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+            outline: none;
+        }
+
+        .btn-11 {
+            border: white;
+            background: green;
+            background: linear-gradient(80deg, #32c0cc 10%, black 100%);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .btn-11:hover {
+            text-decoration: none;
+            color: #fff;
+            background-image: linear-gradient(135deg,  #32c0cc 100%, #000000 20%);
+        }
+
+        .btn-11:before {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            top: -180px;
+            left: 0;
+            width: 30px;
+            height: 100%;
+            background-color: #fff;
+            animation: shiny-btn1 3s ease-in-out infinite;
+        }
+
+        .btn-11:hover {
+            opacity: .7;
+            color: white;
+        }
+
+        .btn-11:active {
+            box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .3), -4px -4px 6px 0 rgba(116, 125, 136, .2), inset -4px -4px 6px 0 rgba(255, 255, 255, .2), inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+        }
+
+        @-webkit-keyframes shiny-btn1 {
+            0% {
+                -webkit-transform: scale(0) rotate(45deg);
+                opacity: 0;
+            }
+
+            80% {
+                -webkit-transform: scale(0) rotate(45deg);
+                opacity: 0.5;
+            }
+
+            81% {
+                -webkit-transform: scale(4) rotate(45deg);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: scale(50) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+        @-webkit-keyframes come-in {
+            0% {
+                -webkit-transform: translatey(100px);
+                transform: translatey(100px);
+                opacity: 0;
+            }
+
+            30% {
+                -webkit-transform: translateX(-50px) scale(0.4);
+                transform: translateX(-50px) scale(0.4);
+            }
+
+            70% {
+                -webkit-transform: translateX(0px) scale(1.2);
+                transform: translateX(0px) scale(1.2);
+            }
+
+            100% {
+                -webkit-transform: translatey(0px) scale(1);
+                transform: translatey(0px) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes come-in {
+            0% {
+                -webkit-transform: translatey(100px);
+                transform: translatey(100px);
+                opacity: 0;
+            }
+
+            30% {
+                -webkit-transform: translateX(-50px) scale(0.4);
+                transform: translateX(-50px) scale(0.4);
+            }
+
+            70% {
+                -webkit-transform: translateX(0px) scale(1.2);
+                transform: translateX(0px) scale(1.2);
+            }
+
+            100% {
+                -webkit-transform: translatey(0px) scale(1);
+                transform: translatey(0px) scale(1);
+                opacity: 1;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            background: #eaedf2;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .stwBlurRainbow,
+        .stwRainbow {
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            z-index: 23;
+            background: linear-gradient(-45deg, #4086f4, #31a952, #fbbe01, #eb4132, #4086f4, #31a952, #fbbe01, #eb4132);
+            background-size: 200%;
+            -webkit-animation: animeBar 5s linear infinite;
+            animation: animeBar 5s linear infinite
+        }
+
+        .stwBlurRainbow {
+            height: 10px;
+            z-index: 22;
+            filter: blur(10px);
+            opacity: .7
+        }
+
+        @-webkit-keyframes animeBar {
+            0% {
+                background-position: 0 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0 50%
+            }
+        }
+
+        @keyframes animeBar {
+            0% {
+                background-position: 0 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0 50%
+            }
+        }
+
+        .uc {
+            pointer-events: none;
+        }
+    </style>
+    <center>
+        <button class="btn-11 custom-btn" style="width: 100%; font-weight: 1000; font-size: 20px; position: sticky; top: 0px; z-index: 3; font-family: Lucida Sans Unicode; line-height: 1rem;">SP-TV(Best Movies)</button>
+
+        <a href="https://t.me/sonesinapharneepyinnyar"target="_blank">
+            <div class="tvv-item">
+                <img class="loading" src="https://i.imgur.com/8q1LvyH.png" style="height: 100px">
+                <div class="tvv-name">TELEGRAM JOIN</div>
+            </div>
+        </a>
+      <a href="https://www.facebook.com/profile.php?id=100092597125337&mibextid=ZbWKwL"target="_blank">
+            <div class="tvv-item">
+                <img class="loading" src="https://i.imgur.com/8q1LvyH.png" style="height: 100px">
+                <div class="tvv-name">Facebook Like</div>
+            </div>
+      </a>
+      <a href="https://www.soulkingdom.net/tv_show/1094"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/sd5XvXZ.jpg" style="width: 100px">
+                <div class="tvv-name">လူငယ်ပေါင်ချိန်(၁)</div>
+            </div>
+      </a>
+      <a href="intent://drive.thutalive.workers.dev/0:/%2523Movies/%25232022/AUGUST/720p/(CM)%20Don&%252339t%20Make%20Me%20Go%20(2022)%20720p.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/72kl1Y6.jpg" style="width: 100px">
+                <div class="tvv-name">Luck</div>
+            </div>
+      </a>
+      <a href="intent://drive.thutalive.workers.dev/0:/%2523Movies/%25232022/AUGUST/720p/(CM)%20Don&%252339t%20Make%20Me%20Go%20(2022)%20720p.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/1PxwCmR.jpg" style="width: 100px">
+                <div class="tvv-name">Don't Make Me go</div>
+            </div>
+      </a>
+      <a href="intent://drive.thutalive.workers.dev/0:/%2523Movies/%25232022/AUGUST/720p/wild.men.2021.720(CM).mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/KPwG75p.jpg" style="width: 100px">
+                <div class="tvv-name">Wild Man</div>
+            </div>
+      </a>
+      <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210428/018a3418f81f4d9.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/K8ontRl.jpg" style="width: 100px">
+                <div class="tvv-name">Joker</div>
+            </div>
+      </a>
+      <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210601/75aae500b0ab43a.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/enjCmjd.jpg" style="width: 100px">
+                <div class="tvv-name">Pokémon</div>
+            </div>
+      </a>
+      <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210422/f6eb7e9f975e434.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/asirSir.jpg" style="width: 100px">
+                <div class="tvv-name">Fast & Furious</div>
+            </div>
+      </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210426/A26E35FDA5514743B97.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/4fbqX1S.jpg" style="width: 100px">
+                <div class="tvv-name">Mortal Kombat</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210426/e9da178187f443b.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/u5PSRYa.jpg" style="width: 100px">
+                <div class="tvv-name">Hua Mulan</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210424/a63f3e7c775a497.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/TKz41jg.jpg" style="width: 100px">
+                <div class="tvv-name">The Valt</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210517/1531fc19e07d4fb.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/KofMEy7.jpg" style="width: 100px">
+                <div class="tvv-name">Karman</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210425/885dd80174f040e.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item">
+                <img class="loading" src="https://i.imgur.com/DLwsAI2.jpg" style="width: 100px">
+                <div class="tvv-name">Nobody</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210605/e3720f351e0d4af.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item">
+                <img class="loading" src="https://i.imgur.com/D99Ndmv.jpg" style="width: 100px">
+                <div class="tvv-name">Cat Man</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210522/5d44f56d1d2249e.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item">
+                <img class="loading" src="https://i.imgur.com/cc9Bw9T.jpg" style="width: 100px">
+                <div class="tvv-name">Mandela</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210522/b6de457f091d455.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item">
+                <img class="loading" src="https://i.imgur.com/3Z2A9VZ.jpg" style="width: 100px">
+                <div class="tvv-name">Kala</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210520/b2f7cb17ce044ed.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item">
+                <img class="loading" src="https://unsoloclic.info/wp-content/uploads/2021/05/MV5BYTM5Njg5NzMtYmFkZC00YzAyLWE3YWYtZjg3YTkzNTAwNWY5XkEyXkFqcGdeQXVyNjI2Njc4MDI@._V1_FMjpg_UX595_1.jpg" style="width: 100px">
+                <div class="tvv-name">Recalled</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210426/73f789df7af34d0.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item">
+                <img class="loading" src="https://i.imgur.com/QWDmFVY.jpg" style="width: 100px">
+                <div class="tvv-name">Edge Of Tomorrow</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210531/10f91c3b229f4a4.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/9f882EI.jpg" style="width: 100px">
+                <div class="tvv-name">Army Of The Dead</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210423/125212b7889e414.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/jzNHQUf.jpg" style="height: 100px">
+                <div class="tvv-name">Seobok</div>
+            </div>
+        </a>
+
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210422/b737e2861763487.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/AZ4KoM5.jpg" style="height: 70px">
+                <div class="tvv-name">Ready One Player</div>
+            </div>
+        </a>
+        <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210422/036f0ec40fcc469.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/tAAKwaQ.jpg" style="height: 100px">
+                <div class="tvv-name">The Mummy</div>
+            </div>
+        </a>
+      <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210422/399f11a0150e457.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/As5sFip.jpg" style="width: 100px">
+                <div class="tvv-name">The Courier</div>
+            </div>
+      </a>
+
+<a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210426/9703e1d75960462.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/Rls3UBq.jpg" style="width: 100px">
+                <div class="tvv-name">Rise of Guardian</div>
+            </div>
+</a>
+   <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210608/b7b17d47dbe9447.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/w68jJhx.jpg" style="width: 100px">
+                <div class="tvv-name">Kio jaane na</div>
+            </div>
+   </a>
+      <a href="intent://media1.mytel.com.mm/video/videomocha_upload/mp4/20210618/e138c25849134f6.mp4#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end"class="btn2 mt-4">
+            <div class="tvv-item" style="text-decoration-color: rgb(177, 7, 197);">
+                <img class="loading" src="https://i.imgur.com/XkhIwwc.jpg" style="width: 100px">
+                <div class="tvv-name">Baggi</div>
+            </div>
+      </a>
+        <div style=" display:inline-block">
+            <a href="">
+                <button class="btn-11 custom-btn" style="width: 80vw; height: 45px; margin-top: 0.6px; font-size: 15px;">
+                    <b>Design By စူပါပါဝါ</b>
+                </button>
+            </a>
+        </div>
+        <div class="stwRainbow"></div>
+        <div class="stwBlurRainbow"></div>
+      <body>
+  <center>
+    <marquee scrollamount="5" bgcolor="#green"direction="left">နောက်ထပ်ဇာတ်ကားများကြည့်ရန်(Next Movies)ကိုနှိပ်ပါ...</marquee>

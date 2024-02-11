@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <title>Movie1</title>
+
+<head>
+
+
+<style>
+#pg{
+  color:blue;
+}
+
+            .ne{ 
+                   display: block;
+            color: #999;
+            font-size: 10px;
+            margin-top:-1px;
+
+          }
+
+
+  #aa{color:red;}
+
+            body { 
+background-color:#ADD8E6;}
+
+
+
+.container { 
+font-weight: bold;  
+width: 100px; 
+height: 140px; 
+position: relative;
+
+} 
+
+
+.card1 {
+        width: 90px;
+        height: 80px;
+      position: relative;
+        top:-1px;
+
+
+
+}
+
+
+span {
+        font-size: 9px;
+        color: #000000;
+        display:inline-block;
+        position: relative;
+        top:0px;
+}			
+
+    figcaption{
+        text-align: center;
+}		
+
+
+    .btn2 {
+    margin: 8px;    
+      font: bold 15px Arial; 
+      text-decoration: none; 
+    border-radius: 10px;    
+    text-transform: uppercase;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+     padding: 0px; 
+    letter-spacing: 1px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    border: 3px solid #8098ff;
+    background-color: #ff;
+    color: #FFFF00;
+    box-shadow: 0 8px 24px 0 rgba(255, 235, 167, .2);
+    transition: 0.2s;
+
+
+  }
+
+  .btn2:active,
+  .btn2:focus,
+  .btn2:hover{
+   color:#FFA500 ;
+   box-shadow: 0 0 0.20em 0.20em rgba(255,255,255);
+   border: 3px solid gold;
+   outline: none;
+   transform: scale(1.07);
+  }
+
+        .container1 { 						
+ background-color: #fff; 
+ width: 100%; 
+ height: 55px; 
+ position: relative;
+ } 		
+
+  .right { 
+  background-color: #fff;
+  border-radius:10px;
+  position: absolute; 
+  top: 9px; 
+  right: 4px; 
+ padding: 2px;
+  } 
+
+  .left { 
+  color: #000;
+ background-color: #fff;
+  border: 0px dodgerblue solid; 
+ border-radius: 10px;
+ font-size: 30px;
+  position: absolute; 
+  top: 8px; 
+  left: 6px; 
+ padding: 2px;
+ outline: none;
+  } 
+
+  .text { 
+  font-size: 18px;
+ color: #000;
+ font-weight: 1000; 
+  position: absolute; 
+  top: 17px; 
+  left: 65px; 
+  } 
+
+     div.ex1 {
+  width: 100%;
+  height: 93vh;
+  overflow: scroll;
+}							
+
+
+   <style>::-webkit-scrollbar{
+    display:none
+}
+*{
+    -ms-overflow-style:none;
+    scrollbar-width:none
+}
+body{
+    margin:0;
+    background:#95B9C7;
+    font-family:Arial,Helvetica,sans-serif;
+    line-height:1.5;
+    color:white;
+    scroll-behavior:smooth;
+    text-align:center;
+}
+#player-wrapper{
+    width:100%;
+    z-index:999;
+}
+.sticky{
+    position:fixed;
+    top:0;
+    width:100%
+}
+#status{
+    position:fixed;
+    bottom:0;
+    right:0;
+    width:100%;
+    background:#fff;
+    display:none;
+}
+.col-sm-2{
+    border-radius:4px
+}
+.sp{
+    width:50%;
+    height:12px;
+    clear:both;
+    margin:20px auto
+}
+.sp-texture{
+    border:1px #000 solid;
+    border-radius:4px;
+    position:relative;
+    background:linear-gradient(45deg,transparent 49%,#000 50%,#000 50%,transparent 51%,transparent),linear-gradient(-45deg,transparent 49%,#000 50%,#000 50%,transparent 51%,transparent);
+    background-size:16px 16px;
+    background-position:0 0;
+    -webkit-animation:spTexture 1s infinite linear;
+    animation:spTexture 1s infinite linear;
+    color:#000;
+    text-align:center;
+    line-height:3em;
+    font-family:roboto
+}
+@-webkit-keyframes spTexture{
+    from{
+        background-position:0 0
+    }
+    to{
+        background-position:-16px 0
+    }
+}
+@keyframes spTexture{
+    from{
+        background-position:0 0
+    }
+    to{
+        background-position:-16px 0
+    }
+}
+.heading{
+    margin:5px auto;
+    text-align:center
+}
+#rmpPlayer{
+    z-index:999
+}
+.white{
+    color:#fff
+}
+.red{
+    color:red
+}
+.yellow{
+    color:#ffdd40
+}
+footer{
+    color:#fff;
+    text-align:center
+}
+footer p{
+    margin-bottom:20px;
+    margin-top:-10px
+}
+.animated{
+    font-family:sans;
+    margin:0;
+    padding:0;
+    font-size:25px;
+    background:url(https://upload.wikimedia.org/wikipedia/commons/3/3b/ColorRotateHr.gif) no-repeat;
+    background-clip:text;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:moveBg 40s linear infinite;
+    -webkit-animation:moveBg 40s linear infinite
+}
+@keyframes moveBg{
+    0%{
+        background-position:0 30%
+    }
+    100%{
+        background-position:100% 50%
+    }
+}
+.blink{
+    animation-name:blinker;
+    animation-duration:1s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite
+}
+@keyframes blinker{
+    0%{
+        opacity:1
+    }
+    50%{
+        opacity:0
+    }
+    100%{
+        opacity:1
+    }
+}
+*{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+body{
+    background:#95B9C7!important;
+    overflow:hidden;
+    color:white;
+}
+.parent{
+    background:rgba(0,0,0,.9);
+    font-family:"Source Sans Pro",sans-serif;
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position:fixed;
+    top:0;
+    height:100%;
+    width:100%;
+    z-index:999999
+}
+.blobs-container{
+    display:flex
+}
+.blob img{
+    width:50%;
+    display:none;
+    margin:auto;
+    margin-top:25px
+}
+.loading{
+    color:#000;
+    display:block;
+    text-align:center;
+    position:relative;
+    top:30px;
+    left:-2px;
+    background:rgba(255,255,255,.9);
+    padding:0 10px;
+    border-radius:3px;
+    width:80%;
+    margin:auto;
+    font-size:10px
+}
+
+.print{height:65px;
+width:65px;
+
+border-radius:50px;
+border:1.5px solid #f5f5f5;
+padding:2px;
+    margin:3px;
+
+}
+.print:hover{height:90px;
+width:90px;
+border:2px solid red;
+border-radius:5px;webkit-box-shadow: 0px 10px 0px 0px rgba(255,0,0,1);
+-moz-box-shadow: 0px 10px 0px 0px rgba(255,0,0,1);
+box-shadow: 0px 3px 20px 3px rgba(255,0,0,100);}
+.print:active{height:65px;
+width:65px;
+border:2px solid red;
+border-radius:5px;
+webkit-box-shadow: 0px 10px 0px 0px rgba(0,255,0,1);
+-moz-box-shadow: 0px 10px 0px 0px rgba(0,255,0,1);
+box-shadow: 0px 3px 20px 3px rgba(0,255,0,100);}
+
+
+marquee{
+border-radius: 0px 0px 0px  0px;
+width: 90%;
+border:2px solid red;
+margin: auto;
+   font-weight:bold;
+   color:#fff;
+display: block;}
+
+.marquee span{display: inline-block;
+ background: #ff0000;
+ border-radius:  0px 0px 0px 0px;
+  padding: 0px 10px;
+   color: #fff;
+   padding:2px;
+   font-weight:bold;
+    display: inline-block;
+     float: left;
+      width: auto;
+       line-height: 35px;}
+
+       .marquee marquee{display: block;
+        line-height: 35px;
+         z-index: -1; 
+         margin-right: 10px;
+          width: auto; 
+          margin: auto;}
+
+
+
+       .viewer{
+        display: flex;
+        width: 70px;
+        height: auto;
+        padding: 10px;
+        vertical-align: middle;
+      }
+
+
+          #count{display:flex;font-size:10pt;padding:1px 10px;width:90px;background:Red;border-radius:0px;}
+
+   .s22 {
+   {display: inline-block; display: inline;}
+   }       
+      #scc{display:inline-block;}   
+
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+
+.search h1
+{
+letter-spacing: 3px;
+display: inline-block;
+border-bottom: 2px solid green;
+padding-bottom: 10px;
+font-size: 10px;
+}
+
+.search input
+{
+
+
+width: ;
+height:30px;
+margin:10px;
+padding: 5px 16px;
+background: transparent;
+border: 2px solid #000;
+font-size: 10px;
+text-transform: capitalize;
+letter-spacing: 3px;
+outline: none;
+}
+
+
+.search input::placeholder
+{
+color: #fff;
+font-weight: 500;
+}
+
+</style>
+
+
+
+
+  <body style="overflow: auto;">
+
+
+  <div id="aa"> <b> á€™á€¼á€”á€ºá€™á€¬á€…á€¬á€á€”á€ºá€¸á€‘á€­á€¯á€¸ á€”á€­á€¯á€„á€ºá€„á€¶á€á€€á€¬ á€›á€¯á€•á€ºá€›á€¾á€„á€ºá€‡á€¬á€á€ºá€€á€¬á€¸á€™á€»á€¬á€¸</b></div>
+  <div id="pg"><center>Page (5)<!-- BEGIN: Powered by Supercounters.com -->
+<center><script type="text/javascript" src="//widget.supercounters.com/ssl/hit.js"></script><script type="text/javascript">sc_hit(1675160,0,5);</script><br><noscript><a href="http://www.supercounters.com/">free online counter</a></noscript>
+</center>
+<!-- END: Powered by Supercounters.com -->
+
+</center>
+
+   <img src="https://i.imgur.com/py9NwGj.png"   height="100px" width="300px">
+   </div>
+
+
+ <div class=""><span><i  style="font-size:26pt" aria-hidden="true"></i></span> <marquee scrollamount="5" direction="left" onmouseover="stop()" onmouseout="start()">á€¡á€¬á€¸á€•á€±á€¸á€™á€¾á€¯á€¡á€á€½á€€á€º
+                á€¡á€‘á€°á€¸á€€á€»á€±á€¸á€‡á€°á€¸á€á€„á€ºá€›á€¾á€­á€•á€«á€á€šá€º...HD Movies á€™á€»á€¬á€¸á€€á€­á€¯á€€á€¼á€Šá€·á€ºá€›á€”á€º á€¡á€„á€ºá€á€¬á€”á€€á€ºá€œá€­á€¯á€„á€ºá€¸á€€á€±á€¬á€„á€ºá€¸á€›á€”á€º á€œá€­á€¯á€¡á€•á€ºá€•á€«á€á€šá€º á€á€„á€ºá€—á€»á€¬.. Video á€™á€»á€¬á€¸á€¡á€á€½á€€á€º á€™á€°á€›á€„á€ºá€¸á€á€„á€ºá€•á€±á€¸á€žá€°á€™á€»á€¬á€¸á€€á€­á€¯ Credit á€•á€±á€¸á€•á€«á€á€šá€º á€á€„á€ºá€—á€»á€¬..   </marquee> </div> 
+
+
+</head>
+        <div class="search">
+<input type="text" name="" id="find" placeholder="á€›á€¯á€•á€ºá€›á€¾á€„á€º á€›á€¾á€¬á€›á€”á€º...." onkeyup="search()">
+</div>
+<body>
+
+    <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/American%20Terror%20Tales%202/American%20Terror%20Tales%202.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/10/mKlGtFDjjPmnuCx1SAykC50b2Ua-200x300.jpg" alt="">
+
+      <figcaption><span>American Terror Tales 2 </span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Horror</i>
+                        <i class="ne"></i>
+                      <i class="ne">HD</i>
+              </div> 	
+   </button>
+
+    <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Anchorage/Anchorage.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/10/dPruJqRih1eTsMCXaBf8kgrGqrd-200x300.jpg" alt="">
+
+      <figcaption><span>Anchorage </span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Crime/Thriller</i>
+                        <i class="ne">USA</i>
+                      <i class="ne">HD</i>
+              </div> 	
+   </button>
+
+
+    <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/The%20Saint%20of%20Second%20Chances/The%20Saint%20of%20Second%20Chances.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/10/zaHcgdkZJ9oV93ZAd9HMKTcYan8-200x300.jpg" alt="">
+
+      <figcaption><span>The Saint of Second Chances</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Documentary</i>
+                        <i class="ne">USA</i>
+                      <i class="ne">HD</i>
+              </div> 	
+   </button>
+
+
+
+    <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/The%20Lady%20of%20Heaven/The%20Lady%20of%20Heaven.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/10/j7pZEzOKDGalpH5fTWZnVO9yKLV-200x300.jpg" alt="">
+
+      <figcaption><span>The Lady of Heaven</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Action</i>
+                        <i class="ne">Georgia</i>
+                      <i class="ne">HD</i>
+              </div> 	
+   </button>
+
+
+    <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Elo%C3%AFse%20s%20Journey/Elo%C3%AFse%20s%20Journey.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/10/1dqL4mDuueNWg8pNFWE5MBxIX0t-200x300.jpg" alt="">
+
+      <figcaption><span>EloÃ¯seâ€™s Journey</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Comedy</i>
+                        <i class="ne">France</i>
+                      <i class="ne">HD</i>
+              </div> 	
+   </button>
+
+
+     <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Sniper%20G%20R%20I%20T%20Global%20Response%20and%20Intelligence%20Team/Sniper%20G%20R%20I%20T%20Global%20Response%20and%20Intelligence%20Team.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/10/gcd5TJwXLWeQ2Dn0aRxI8OJIIxK-200x300.jpg" alt="">
+
+      <figcaption><span>Sniper: G.R.I.T. â€“ Global Response & Intelligence Team</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Action</i>
+                        <i class="ne"></i>
+                      <i class="ne">HD</i>
+              </div> 	
+   </button>
+
+
+     <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Eye%20Of%20The%20Storm/Eye%20Of%20The%20Storm.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/10/1GHzOzeljHDGxE2okVnouNuFvCs-200x300.jpg" alt="">
+
+      <figcaption><span>Eye of the Storm</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Drama</i>
+                        <i class="ne">Taiwan</i>
+                      <i class="ne">HD</i>
+              </div> 	
+   </button>
+
+     <button id="image_13"
+    onclick="window.location.href='intent://www.zegomovie.com/Videos/Nowhere/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/rpzFxv78UvYG5yQba2soO5mMl4T-200x300.jpg" alt="">
+
+      <figcaption><span>Nowhere</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Drama/Thriller</i>
+                        <i class="ne">Spain</i>
+                      <i class="ne">SD</i>
+              </div> 	
+   </button>
+
+      <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/The%20Stratum/The%20Stratum.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/meaaTIQd3ylYa9Fx4JhPnsLmNdM-200x300.jpg" alt="">
+
+      <figcaption><span>The Stratum</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Action/Thriller</i>
+                        <i class="ne"></i>
+                      <i class="ne">HD</i>
+              </div> 	
+   </button>
+
+     <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Beyond%20The%20Gates%20Of%20Hell/Beyond%20The%20Gates%20Of%20Hell.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/8XpGl5fkUVf7Lv8Rx12LpPTYtWT-200x300.jpg" alt="">
+
+      <figcaption><span>Beyond the Gates of Hell</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Drama/Horror</i>
+                        <i class="ne"></i>
+              </div> 	
+   </button>
+
+
+     <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Doctor/Doctor.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/fRUMAbBCDT5hacKv7TWH21FjTeO-200x300.jpg" alt="">
+
+      <figcaption><span>Doctor</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Action/Horror</i>
+                        <i class="ne">South korea</i>
+              </div> 	
+   </button>
+
+
+
+
+    <button id="image_13"
+    onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/All%20These%20Years/All%20These%20Years.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                  class="btn2 mt-4">
+                  <div class="container">
+      <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/tl5hARHUEK9rnhsCs4H8kk2wfkk-200x300.jpg" alt="">
+
+      <figcaption><span>All These Years</span> </figcaption>
+
+                 <i class="ne">2023</i>
+                       <i class="ne">Romance</i>
+                        <i class="ne"></i>
+              </div> 	
+   </button>
+
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Taken%20In%20Montana/Taken%20In%20Montana.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/epHK4A64TgCfgK6bF2U8WR3ricU-224x300.jpg" alt="">
+
+    <figcaption><span>Taken In Montana</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thrilla</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/White%20Paradise/White%20Paradise.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/bD3TKQzXbSEzCzDEw5bonMyjTyc-200x300.jpg" alt="">
+
+    <figcaption><span>White Paradise</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thrilla</i>
+                      <i class="ne">France</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Blood%20on%20the%20Nameless%20River/Blood%20on%20the%20Nameless%20River.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/9gSq2uwWsDHNf2NwsdkTkMPyytb-200x300.jpg" alt="">
+
+    <figcaption><span> Blood on the Nameless River</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">Korea</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Raid%20On%20The%20Lethal%20Zone/Raid%20On%20The%20Lethal%20Zone.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/1VSuB0kB5wtLfs9wLpUieRa6vvK-214x300.jpg" alt="">
+
+    <figcaption><span> Raid On The Lethal Zone </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Dark%20Asset/Dark%20Asset.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/hfxqsC8Bz2wMZmXKwEZqKyJiScT-200x300.jpg" alt="">
+
+    <figcaption><span> Dark Asset </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/Ace%20Bodyguard/Ace%20Bodyguard.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/crX32qwCocogMPYpuyxJHQbC2Cn-200x300.jpg" alt="">
+
+    <figcaption><span> Ace bodyguard  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1PPV7rnmVbndNUo9ElNK9LUfsJB2ByNnx?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/VPTCfJG.jpg" alt="">
+
+    <figcaption><span>Expend4bles </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1QSl8aGDBX69XP4B--SnsmqTggENMKZd0?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/JXHNY1p.jpg" alt="">
+
+    <figcaption><span>Legend of Beauty Zhao Jun á€’á€á€¹á€á€¬á€›á€®á€‘á€²á€€ á€§á€€á€›á€®á€€á€»á€±á€¬á€„á€ºá€¸á€€á€»á€½á€„á€ºá€¸ </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne"></i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesTwo/The%20Haunting%20at%20Saint%20Josephs/The%20Haunting%20at%20Saint%20Josephs.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/eDzQFxs0KTzHUPkIR0c44TSGJUR-200x300.jpg" alt="">
+
+    <figcaption><span>The Haunting at Saint Josephâ€™s </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror</i>
+                      <i class="ne">Austialia</i>
+            </div> 	
+ </button>
+
+       <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TripleRiding23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/8OITSO1CZyts8sVMf2eYQ9HXDkt-200x300.jpg" alt="">
+
+    <figcaption><span>Tribble Riding</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Drama</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+      <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TraumaTherapyPsychosis23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/tWIEKZQaV0JVtICzCnSoJtRSXP-200x300.jpg" alt="">
+
+    <figcaption><span>Trauma Therapy: Psychosis</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Kick23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/8s6s8PMGMDHkEPLhHiBLhaEfjFu-200x300.jpg" alt="">
+
+    <figcaption><span>Kick</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+     <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Solace/Solace.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/pbcXpZgem8kgr90RwIUNAbC2ite-200x300.jpg" alt="">
+
+    <figcaption><span>Solace</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime/Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/ThePoughkeepsieTapes07/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/8ppkhu3pO3fnXr05YeE7ryKloVd-200x300.jpg" alt="">
+
+    <figcaption><span>The Poughkeepsie Tapes</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime/Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/AlienPlanet23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/vNDZPS43MlKn7KRlNmJhB91UnlC-200x300.jpg" alt="">
+
+    <figcaption><span>Alien Planet</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Science Fiction</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/A%20Day%20in%20Tongyeong/A%20Day%20in%20Tongyeong.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/elHx3kIG4MFZlfzXGKtyw8mNzya-200x300.jpg" alt="">
+
+    <figcaption><span>A Day in Tongyeong </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Drama</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/ThisHitsHome23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/7r6jWUuyJFU6z5JPBjm4fz8trxA-200x300.jpg" alt="">
+
+    <figcaption><span>This Hits Home </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Documentary</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/CherishandRuelle23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/AgiZuJ77TWleTbh82braAtCfVaD-200x300.jpg" alt="">
+
+    <figcaption><span>Cherish & Ruelle </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">Indonesia</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/BeneathUsAll23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/5N23AjCxQDhBWM5qblV2phv0zND-200x300.jpg" alt="">
+
+    <figcaption><span>Beneath Us All</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/ConcreteUtopia23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/bHH5jiumG6QXpvKfUEN2QsaBVV-200x300.jpg" alt="">
+
+    <figcaption><span>Concrete Utopia</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">South Korea</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Smugglers/Smugglers.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/dJqOQTOwnBkFuLoqFwMefBDCVIG-200x300.jpg" alt="">
+
+    <figcaption><span>Smugglers</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action/Crime</i>
+                      <i class="ne">South Korea</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/17CfO5fxYoBWawImsZHF41OqgqSFeHjDn?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/5p827vz.png" alt="">
+
+    <figcaption><span>á€á€­á€‰á€¬á€‰á€ºá€€á€­á€¯á€šá€ºá€•á€½á€¬á€¸á€™á€­á€…á€¹á€†á€¬á€™á€œá€±á€¸á€”á€¾á€„á€·á€º á€…á€…á€ºá€žá€Šá€ºá€á€±á€¬á€º</span> </figcaption>
+
+               <i class="ne">2021</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1oN18gECj4dzvVKnLdmMO1lrD7VUL-08-?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/gnD5s6Z.png" alt="">
+
+    <figcaption><span>á€™á€±á€·á€•á€»á€±á€¬á€€á€ºáá€™á€›á€”á€­á€¯á€„á€ºá€žá€±á€¬</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Romance</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/19dRa36er22qtiabGIsBpPSdvLZacD0OT?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/hIZe8a6.png" alt="">
+
+    <figcaption><span>á€€á€­á€¯á€šá€·á€ºá€›á€²á€·á€œá€™á€ºá€¸á€•á€¼á€€á€¼á€šá€º</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Romance</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/14lgYFmXGtsB-k5DO2-py-FGhWoY4nHxP?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/F6nRnKD.png" alt="">
+
+    <figcaption><span>á€¡á€‘á€°á€¸á€€á€­á€¯á€šá€ºá€›á€¶á€á€±á€¬á€º </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/NewKungFuCultMaster2/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2022/03/s94AGikcoJyXygw8IGZcyucylk1-201x300.jpg" alt="">
+
+    <figcaption><span>New Kung Fu Cult Master 2  </span> </figcaption>
+
+               <i class="ne">2022</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/NewKungFuCultMaster1/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2022/03/yXwmYJuRmIi4mVEQqmU99A7hc0G-210x300.jpg" alt="">
+
+    <figcaption><span>New Kung Fu Cult Master 1  </span> </figcaption>
+
+               <i class="ne">2022</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/MarjoriePrime17/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/rvTZFjcNvzPFYJnmdrvSrGvqx67-200x300.jpg" alt="">
+
+    <figcaption><span>Marjorie Prime </span> </figcaption>
+
+               <i class="ne">2017</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheHotChick02/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/lnnGE4TKa05t20SZ2batuAhXCp4-200x300.jpg" alt="">
+
+    <figcaption><span>The Hot Chick  </span> </figcaption>
+
+               <i class="ne">2022</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/SinsoftheFather22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/hzg1P0KhWIj0jwOTJUradOYO99p-200x300.jpg" alt="">
+
+    <figcaption><span>Sins of the Father  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/LangLangPlaysDisney23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/5y7UlJGConbahwKgQQ9fQZyB8QX-200x300.jpg" alt="">
+
+    <figcaption><span>Lang Lang Plays Disney </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Adventure</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheHunter11/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/KgFYNh3GE36FrXjo9udZbnV1z6-200x300.jpg" alt="">
+
+    <figcaption><span>The Hunter </span> </figcaption>
+
+               <i class="ne">2011</i>
+                     <i class="ne">Adventure</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Tulah623/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/sWFmBGpjdft904Gg0j5JZUi0wkM-202x300.jpg" alt="">
+
+    <figcaption><span>Tulah 6/13  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Sasiyum%20Sakunthalyum/Sasiyum%20Sakunthalyum.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/cHRitjn1hJgz00jOkF7PRGkn9kY-200x300.jpg" alt="">
+
+    <figcaption><span>Shashiyum Shakundhalayum  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1xT0ONNEjpdwfo5roe47rS6L5Kk3zCrJS?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/49A7d8d.png" alt="">
+
+    <figcaption><span>Raid on The Lethal Zone  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Shanghai%20Bund%20The%20Righteous%20Way%20of%20the%20Wind%20and%20Cloud/Shanghai%20Bund%20The%20Righteous%20Way%20of%20the%20Wind%20and%20Cloud.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/bmyFDfDKSp2sXd2Wm7WzUIpoUVb-200x300.jpg" alt="">
+
+    <figcaption><span>Shanghai Bund: The Righteous Way of the Wind and Cloud </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Golda23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/4SbxFDkhxZeAAN1zxgVJpdUB3V-200x300.jpg" alt="">
+
+    <figcaption><span>Golda  </span> </figcaption>
+
+               <i class="ne">2022</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">UK</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheBaker23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/ocUrOchwIIageWWrHKiiVgUc06L-200x300.jpg" alt="">
+
+    <figcaption><span>The Baker </span> </figcaption>
+
+               <i class="ne">2022</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">Canada</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Evinced22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/hnDf9cH3XnLbmdyBmE029l1xC44-200x300.jpg" alt="">
+
+    <figcaption><span>Evinced </span> </figcaption>
+
+               <i class="ne">2022</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheRetirementPlan23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/r4yCgWjAbh13X5EFiXPpbnnBYhP-200x300.jpg" alt="">
+
+    <figcaption><span>The Retirement Plan</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/SheCameFromTheWoods23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/89uBJh6y1AQ7KE7bDO2u2mTU6N-200x300.jpg" alt="">
+
+    <figcaption><span>She Came from the Woods </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+     <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/IslandEscape23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/5TA3AmwWKasVMRFGXZk0gRv2Oz6-200x300.jpg" alt="">
+
+    <figcaption><span>Island Escape </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Slotherhouse23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/pLSoVBuBa3aqFBgBY2puu3BN8of-200x300.jpg" alt="">
+
+    <figcaption><span>Slotherhouse </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/AWOL7215/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/9xnzd7yq9vXrjuQjlRLNZ0kFQYU-200x300.jpg" alt="">
+
+    <figcaption><span>AWOL-72  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheDirty3rdNextGeneration22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/4tLq7Wj7XFiLSAUQ2vt2KMqVhOZ-200x300.jpg" alt="">
+
+    <figcaption><span>The Dirty 3rd: Next Generation </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/GandeevadhariArjuna23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/ysgb4NqiSoNrqIVCR4Z0LUhu5Qu-200x300.jpg" alt="">
+
+    <figcaption><span>Gandeevadhari Arjuna</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/DoubleKill23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/z57M0GAfnRETh44VECfjNiU94pL-200x300.jpg" alt="">
+
+    <figcaption><span>Double Kill</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/NeneNaa23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/2qFVYPheE59ww3EDBuHI5MF7klf-200x300.jpg" alt="">
+
+    <figcaption><span>Soorpanagai</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheValleyoftheSacredKing23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/7Hk1qxAvZi9H9cfBb4iHkoGjapH-200x300.jpg" alt="">
+
+    <figcaption><span>The Valley of the Sacred King</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/SpyKidsArmageddon23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/vd8YdaH7dzeIMGTNwQinlSiA1gV-200x300.jpg" alt="">
+
+    <figcaption><span>Spy Kids: Armageddon</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Vidyarthi/Vidyarthi.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/ldxDc4EtyFuTYvp7aPc1LFj5HrH-200x300.jpg" alt="">
+
+    <figcaption><span>Vidyarthi</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/BrokenArmyX-FilesStealthMan23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/4F1EkmTCW0AjsXnyxyIDiYeBbae-200x300.jpg" alt="">
+
+    <figcaption><span>Broken Army X-Files Stealth Man</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Grindhouse07/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/vZ4pV3zwVb4pJwdvPBe5BKO6KLD-210x300.jpg" alt="">
+
+    <figcaption><span>Grindhouse </span> </figcaption>
+
+               <i class="ne">2007</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1-LH08hFokk-G8pDTRHgDznZalP_qXRqb?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/UPsllyh.png" alt="">
+
+    <figcaption><span>Dead Silence  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1G9YRemo1uHpEcBSgRsLXxdCwb4_8ZVbL?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/TmE7tQj.png" alt="">
+
+    <figcaption><span>Shibpur </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Vaathi/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/03/mLK1ER5Kzpsse789vBKnp8S1aRB-200x300.jpg" alt="">
+
+    <figcaption><span>Vaathi </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/AntigangLaReleve23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/kGclAzPJobEy7qg7LNuFI9grNoh-200x300.jpg" alt="">
+
+    <figcaption><span>The Squad: Home Run </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">France</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/KillHerGoats23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/oHVuaIHBX0dqqBUbvYyHgkhyCr8-200x300.jpg" alt="">
+
+    <figcaption><span>Kill Her Goats  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/ToKillAStepfather23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/zvesUInATbB7KB3eVthv3kWsXh1-200x300.jpg" alt="">
+
+    <figcaption><span>To Kill a Stepfather  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Drama</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Bedurulanka/Bedurulanka.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/xcQZlCGOalH5V2idj8wk7ckitWg-200x300.jpg" alt="">
+
+    <figcaption><span>Bedurulanka </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/VoiceofSathyanathan23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/rVGr7tD7j866GtZfV6IxTDxqzIe-200x300.jpg" alt="">
+
+    <figcaption><span>Voice of Sathyanathan  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/WEB23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/lU1Brm86Ez7JM16HEpH74Sxvtbd-200x300.jpg" alt="">
+
+    <figcaption><span>Web  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+     <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheAdvanturers/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/NnDkzL6.png" alt="">
+
+    <figcaption><span>The Advanturers </span> </figcaption>
+
+               <i class="ne">2017</i>
+                     <i class="ne">Action/Crime</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+     <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Raatchasi/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2022/08/gjEwIsJJAOkJIlS0Wqj2bzkse1I-200x300.jpg" alt="">
+
+    <figcaption><span>Raatchasi </span> </figcaption>
+
+               <i class="ne">2019</i>
+                     <i class="ne">Drama/Thriller</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Natty%20Knocks/Natty%20Knocks.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/wXgz4CTrgU0WPv4IRRFBqFzy1Rl-200x300.jpg" alt="">
+
+    <figcaption><span>Natty Knocks</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror/Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Dinosaurs/Dinosaurs.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/jaKXr408x6ttnEP3RHOHT87M99X-200x300.jpg" alt="">
+
+    <figcaption><span>Dinosaurs </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Ayothi80/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/em8sXeAUjNyWHEK2eG5rpYdoQfn-200x300.jpg" alt="">
+
+    <figcaption><span>Ayothi  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Drama</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/AnelMeleyPaniThuliMathi22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/thqzMTWt8I4EoBA4jJmX2MYGTj5-200x300.jpg" alt="">
+
+    <figcaption><span>Anel Meley Pani Thuli  </span> </figcaption>
+
+               <i class="ne">2022</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Creation%20Of%20Gods/Creation%20Of%20Gods.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/ccJpK0rqzhQeP7Mrs2uKqObFY4L-200x300.jpg" alt="">
+
+    <figcaption><span>Creation of the Gods I: Kingdom of Storms </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/JaaneJaan23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/wydlTcs1Op0DEKTfAsJOfi0bGQ-200x300.jpg" alt="">
+
+    <figcaption><span>Jaane Jaan</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime/Thriller</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TilDeathDoUsPart23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/5DQ4YeG.png" alt="">
+
+    <figcaption><span>Til Death Do Us Part </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action/Horror</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/WildernessMysteryCase23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/Nlx5xB2.png" alt="">
+
+    <figcaption><span>Wilderness Mystery Case</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+     <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Rebel22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/anW2wuO.png" alt="">
+
+    <figcaption><span>Rebel</span> </figcaption>
+
+               <i class="ne">2022</i>
+                     <i class="ne">Action</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/StrangeWilderness08/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/8hZSpoI.png" alt="">
+
+    <figcaption><span>Strange Wilderness</span> </figcaption>
+
+               <i class="ne">2008</i>
+                     <i class="ne">Adventure</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/BuyaHamkaVol123/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/OuDUXgF.png" alt="">
+
+    <figcaption><span>Buya Hamka Vol. 1</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">History</i>
+                      <i class="ne">Indonesia</i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/ElConde23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/UJWLqYI.png" alt="">
+
+    <figcaption><span>El Conde</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Fantasy/History</i>
+                      <i class="ne">Chile</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/MurderSyndicate23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/sWEVZyU.png" alt="">
+
+    <figcaption><span>Murder Syndicate</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action/Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+     <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Earwig21/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/kroBXkrqoNG4x6unizzOEJ6kXkF-200x300.jpg" alt="">
+
+    <figcaption><span>Earwig</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Drama/Horror</i>
+                      <i class="ne">France</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/DigitalVillage23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/kA5GbS4ucM7MzGehpJAteDCvKnC-225x300.jpg" alt="">
+
+    <figcaption><span>Digital Village</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Drama</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TilDeathDoUsPart23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/md0WF0F.png" alt="">
+
+    <figcaption><span>Til Death Do Us Part</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/ThisMustBeThePlace11/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/bH1tmed.png" alt="">
+
+    <figcaption><span>This Must Be the Place</span> </figcaption>
+
+               <i class="ne">2011</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">France</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/RobotNo823/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/xV1NybO.png" alt="">
+
+    <figcaption><span>(æœºå™¨äºº8å·) Mr. Robot 2023</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+     <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Rampage09/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/aihlgJM.png" alt="">
+
+    <figcaption><span>Rampage </span> </figcaption>
+
+               <i class="ne">2009</i>
+                     <i class="ne">Action/Crime</i>
+                      <i class="ne">Canada</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/SilentDuel23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/cFaAXkk.png" alt="">
+
+    <figcaption><span>Silent Duel </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/DesertChasingCloudSword23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/satWROu.png" alt="">
+
+    <figcaption><span>Desert Chasing Cloud Sword  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheUnbinding23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/sxqQFeiByFEczmPtcYzuzVBmnle-200x300.jpg" alt="">
+
+    <figcaption><span>The Unbinding </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror/Thriller</i>
+                      <i class="ne">uSA</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/ChooseLove23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/w2AuImjsLYWhDaOwsbU9rdRxzOQ-200x300.jpg" alt="">
+
+    <figcaption><span>Choose Love </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne">uSA</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TumbalKanjengIblis22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/wL1mzY7FUrYO1fPORVEUnM45uh9-226x300.jpg" alt="">
+
+    <figcaption><span>Tumbal Kanjeng Iblis </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror</i>
+                      <i class="ne">Indonesia</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/ThunderMonk23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/zxRt3S43UT9k7gezX1GUXhPiwUE-210x300.jpg" alt="">
+
+    <figcaption><span>Thunder Monk</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action/comedy</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Journey%20of%20Love%2018+/Journey%20of%20Love%2018+.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/6CDgkXPMQfMt3Kity3VHtYQNTao-200x300.jpg" alt="">
+
+    <figcaption><span>Journey of Love 18+</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Greenhouse23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/zFgbHWDgRNhRLQj56sMClcBJa8-210x300.jpg" alt="">
+
+    <figcaption><span>Greenhouse</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime</i>
+                      <i class="ne">South Korea</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/DeathNotice23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/fDagKvVTtXLdfVLW5v5ZuzxOito-200x300.jpg" alt="">
+
+    <figcaption><span>Death Notice</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1x1RFM7SV4oIu133diAIlu8ukDDsUEJsh?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/z1TOmL4.png" alt="">
+
+    <figcaption><span>á€€á€»á€„á€ºá€¸á€á€°á€‚á€­á€¯á€á€ºá€¸á€”á€¾á€„á€·á€º á€žá€½á€±á€¸á€€á€œá€²á€·á€…á€¬á€¸</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Sentinelle23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/wrFg0Q1kqfOhxlRvb8Dle7WF58F-200x300.jpg" alt="">
+
+    <figcaption><span>Sentinelle </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">France</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Aneethi23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/mBb8HNk1Iz7jeZxqhaFPEWXbLxs-200x300.jpg" alt="">
+
+    <figcaption><span>Aneethi</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+  <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/HolidayHarmony22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/5lDOz2zlfiprRYKAWUJRkdSaWhl-200x300.jpg" alt="">
+
+    <figcaption><span>Holiday Harmony </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne">South Africa</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Duma05/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/opoDxQW9S6SaiP8rY7urw16QVTL-200x300.jpg" alt="">
+
+    <figcaption><span>Duma</span> </figcaption>
+
+               <i class="ne">2005</i>
+                     <i class="ne">Adventure</i>
+                      <i class="ne">South Africa</i>
+            </div> 	
+ </button>
+
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TotheNorth22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/1NpHftTFLPqBedrFLPcCnTtJvlz-212x300.jpg" alt="">
+
+    <figcaption><span>To The North</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">Bulgaria</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/10DaysofaBadMan23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/zvS2VqKDYrvBAgnxP8e46ziOic1-202x300.jpg" alt="">
+
+    <figcaption><span>10 Days of a Bad Man</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime</i>
+                      <i class="ne">Turkey</i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Apteeker%20Melchior%20Timuka%20Tutar/Apteeker%20Melchior%20Timuka%20Tutar.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/kZd0uN7BpsKR5VPyWylVv8IQChg-200x300.jpg" alt="">
+
+    <figcaption><span>Office Race </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Comedy</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+
+     <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Apteeker%20Melchior%20Timuka%20Tutar/Apteeker%20Melchior%20Timuka%20Tutar.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/A210kNbPxNeycyhniOiCoH90bsW-200x300.jpg" alt="">
+
+    <figcaption><span>Melchior the Apothecary: The Executionerâ€™s Daughter </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Crime</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+     <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Blue%20Beetle/Blue%20Beetle.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/lZ2sOCMCcGaPppaXj0Wiv0S7A08-200x300.jpg" alt="">
+
+    <figcaption><span>Blue Beetle </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Kousalya%20Supraja%20Rama/Kousalya%20Supraja%20Rama.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/Ajc2GS2GU9dVzgNGgvyrkC5bmaV-200x300.jpg" alt="">
+
+    <figcaption><span>Kousalya Supraja Rama  </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Drama</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+     <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/FatherSoldier22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/oamckKGF6jB2nTuPCkISLSh3Cyy-200x300.jpg" alt="">
+
+    <figcaption><span>Father & Soldier </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">War</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Apaches23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/tUez9nfKgolfL2seCMFz2VofgI2-200x300.jpg" alt="">
+
+    <figcaption><span>Apaches: Gang of Paris </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheLumpinMyHeart22/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/7dRA1lDG3T2xjZLJab5MosMiPKS-200x300.jpg" alt="">
+
+    <figcaption><span>The Lump in my Heart</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Damar</i>
+                      <i class="ne">Japan</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/TheBookAndTheSword23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/u2lSKl5TmOno0xOOSz27XUCzVBk-200x300.jpg" alt="">
+
+    <figcaption><span>The Book and the Sword</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/A%20Million%20Miles%20Away/A%20Million%20Miles%20Away.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/kMI3tgxLAZbzGOVlorUBva0kriS-200x300.jpg" alt="">
+
+    <figcaption><span>A Million Miles Away</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">History</i>
+                      <i class="ne">Mexico</i>
+            </div> 	
+ </button>
+
+
+      <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1Hc6k7TVGl_O3HmcenhPiOMv_zwh06bUq?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/0GjRt4z.png" alt="">
+
+    <figcaption><span>á€¡á€žá€¶á€™á€²á€·á€á€­á€¯á€€á€ºá€•á€½á€²</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+      <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1SAokRZgG67nr7oIU4TTQRcKA_X9Dx_eF?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/UtOpzhv.png" alt="">
+
+    <figcaption><span>á€á€…á€¹á€†á€±á€™á€¼á€­á€¯á€·á€á€±á€¬á€º</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror/Thriller</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Strange%20Case%20in%20Western%20Hunan/Strange%20Case%20in%20Western%20Hunan.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/hAwMS5ZBMY72NOQOqemtSEWMXgo-200x300.jpg" alt="">
+
+    <figcaption><span>Strange Case in Western Hunan</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Sacrum%20Vindictae/Sacrum%20Vindictae.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/auyGypNbvHh4KpEVwmzI8ngaMzv-201x300.jpg" alt="">
+
+    <figcaption><span>Sacrum Vindictae</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/Captive23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/1VKCtDnTnhYRnxmwYotN1gKE9gX-200x300.jpg" alt="">
+
+    <figcaption><span>Captive</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Horror/Thriller</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/OnceUponaCrime23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/5FFpXoNpHdmx4hYEQOjtgotOH4b-200x300.jpg" alt="">
+
+    <figcaption><span>Once Upon a Crime</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">Japan</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/HerChapter123/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/ov0gXlRyU7fH7Oo5mXAFtm0DdVT-200x300.jpg" alt="">
+
+    <figcaption><span>HER: Chapter 1</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/BholaShankar23/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/hgip2gbwu19ITJw1KvzLjKHIInt-200x300.jpg" alt="">
+
+    <figcaption><span>Bhola Shankar</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Uncle%20Maoshan/Uncle%20Maoshan.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/nD1VsIIGAGyCiH92vlslDuYrTWg-200x300.jpg" alt="">
+
+    <figcaption><span>Uncle Maoshan</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.googleapis.com/drive/v3/files/1F4Apwoa77auu1rCAfIiwGyydYtMfVSfH?alt=media&key=AIzaSyBNQaT4-s5w7t2o1llKJHKyTLdiVSYffWI#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://i.imgur.com/ZD87AlP.png" alt="">
+
+    <figcaption><span>á€á€›á€¯á€á€ºá€”á€•á€”á€ºá€¸á€”á€¾á€„á€·á€º á€žá€°á€á€­á€¯á€˜á€áá€‘á€½á€€á€ºá€œá€™á€ºá€¸</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">China</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Operation%20Napoleon/Operation%20Napoleon.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/j2Or0w69bpPXrmkE0hpTzw6hzsr-200x300.jpg" alt="">
+
+    <figcaption><span>Operation Napoleon</span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Thriller</i>
+                      <i class="ne">Germany</i>
+            </div> 	
+ </button>
+
+   <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Gammathu/Gammathu.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/oMyTPMVLiQ5I39WxfXh9H1SXiGR-212x300.jpg" alt="">
+
+    <figcaption><span>Gammathu </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">India</i>
+            </div> 	
+ </button>
+
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Bone%20Cold/Bone%20Cold.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/yi8TQ9txgb7wDtGkghQmkkZLL9r-200x300.jpg" alt="">
+
+    <figcaption><span>Bone Cold </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne"></i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://download.myanmarsubmovie.com/wp-content/uploads/2023/NewMoviesOne/Ramabanam/Ramabanam.mp4#Intent;scheme=https;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/gYpJc2TdwJugZF3cG7o7HWwixQy-200x300.jpg" alt="">
+
+    <figcaption><span>Ramabanam </span> </figcaption>
+
+               <i class="ne">2023</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+    <button id="image_13"
+  onclick="window.location.href='intent://www.zegomovie.com/Videos/IntheLineofFire93/index.m3u8#Intent;scheme=http;type=video/*;package=com.genuine.leone;S.browser_fallback_url=market://details?id=com.genuine.leone.ad;S.title=PLAYIDTV;end';"
+                class="btn2 mt-4">
+                <div class="container">
+    <img class="card1" src="https://myanmarsubmovie.com/wp-content/uploads/2023/09/3NvOFpmyECI3DNExYMtFIRcGMsu-200x300.jpg" alt="">
+
+    <figcaption><span>In the Line of Fire </span> </figcaption>
+
+               <i class="ne">1993</i>
+                     <i class="ne">Action</i>
+                      <i class="ne">USA</i>
+            </div> 	
+ </button>
+
+
+
+
+
+
+
+
+
+</br>
+
+
+
+
+
+
+<a href="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/moviesstore/s4mm6.html" class="next">&laquo;Home á€žá€­á€¯á€· </a>
+   <a href="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/moviesstore/s4mm4.html" class="next">Back&raquo;</a>
+ <!--<a href="s4mm4" class="next">Next&raquo;</a>
+ <a href="Int'l movie2 .html" class="next">PAGE (á‚) á€žá€­á€¯á€· &raquo;</a>
+   <a href="Int'l movie1.html" class="next">PAGE (á) á€žá€­á€¯á€· &raquo;</a>-->
+  <!-- BEGIN: Powered by Supercounters.com -
+<center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_t.js"></script><script type="text/javascript">sc_online_t(1675227,"Users Online","170ddb");</script><br><noscript><a href="https://www.supercounters.com/">supercounters.com</a></noscript>
+</center>
+<!-- END: Powered by Supercounters.com -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- javascript 
+<script type="text/javascript">
+function search() {
+let filter = document.getElementById('find').value.toUpperCase();
+let item = document.querySelectorAll('.container');
+let l = document.getElementsByTagName('span');
+for(var i = 0;i<=l.length;i++){
+let a=item[i].getElementsByTagName('span')[0];
+let value=a.innerHTML || a.innerText || a.textContent;
+if(value.toUpperCase().indexOf(filter) > -1) {
+item[i].style.display="";
+}
+else
+{
+item[i].style.display="none";
+}
+}
+}
+
+    </script>
+
+
+</html>-->
