@@ -8,7 +8,7 @@ if (password=="ams22222")
 { loggedin=true; window.location="eighteen/18main.html";
   } 
    if (password=="t11111") 
-{ loggedin=true; window.location="eighteen/18main.html";
+{ loggedin=true; window.location="https://xnxxlive.github.io/eighteen/18main.html";
 }
                  if (password=="11111") 
 { loggedin=true; window.location="eighteen/18main.html";
