@@ -1,5 +1,5 @@
 
-const url = "indiatv/indiatvm3u.js"
+const url = "https://xnxxlive.github.io/indiatv/indiatvm3u.js"
 fetch(url)
   .then((response) => {
     const urlData = response.json();
