@@ -1,4 +1,4 @@
-const url =  "iptv/fightm3u.js"
+const url =  "https://xnxxlive.github.io/iptv/fightm3u.js"
 fetch(url)
   .then((response) => {
   const urlData = response.json();
