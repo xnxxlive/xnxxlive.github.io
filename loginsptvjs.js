@@ -1,25 +1,25 @@
 function LogIn(){ loggedin=false; password=""; password=prompt("Password:",""); password=password.toLowerCase(); 
 if (password=="n11111") 
-{ loggedin=true; window.location="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/eighteen/18main.html"; } 
+{ loggedin=true; window.location="eighteen/18main.html"; } 
 if (password=="ams22222") 
-{ loggedin=true; window.location="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/eighteen/18main.html";
+{ loggedin=true; window.location="eighteen/18main.html";
 }
  if (password=="unw33334")
-{ loggedin=true; window.location="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/eighteen/18main.html";
+{ loggedin=true; window.location="eighteen/18main.html";
   } 
    if (password=="t11111") 
-{ loggedin=true; window.location="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/eighteen/18main.html";
+{ loggedin=true; window.location="eighteen/18main.html";
 }
                  if (password=="11111") 
-{ loggedin=true; window.location="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/loginwelcome/1.2.2024.html";
+{ loggedin=true; window.location="eighteen/18main.html";
 }
                  if (password=="tto111") 
-{ loggedin=true; window.location="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/eighteen/18main.html"; } 
+{ loggedin=true; window.location="eighteen/18main.html"; } 
 if (password=="paid888") 
-{ loggedin=true; window.location="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/loginwelcome/test.html";
+{ loggedin=true; window.location="eighteen/18main.html";
 }
                  if (password=="paid889") 
-{ loggedin=true; window.location="https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/eighteen/18main.html";
+{ loggedin=true; window.location="eighteen/18main.html";
 }
                  if (loggedin==false) { alert("Viber-09946369791ကိုဆက်သွယ်ပါ/AppထဲရှိUserGroupမှဆက်သွယ်လဲရပါတယ်");}} 
   /*
