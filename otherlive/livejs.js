@@ -1,5 +1,5 @@
 
-const url = "https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/otherlive/livem3u8.html"
+const url = "https://xnxxlive.github.io/otherlive/livem3u8.js"
 fetch(url)
   .then((response) => {
     const urlData = response.json();
