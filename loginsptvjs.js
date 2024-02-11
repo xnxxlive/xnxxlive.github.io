@@ -1,17 +1,17 @@
 function LogIn(){ loggedin=false; password=""; password=prompt("Password:",""); password=password.toLowerCase(); 
 if (password=="n11111") 
-{ loggedin=true; window.location="eighteen/18main.html"; } 
+{ loggedin=true; window.location="https://xnxxlive.github.io/eighteen/18main.html"; } 
 if (password=="ams22222") 
-{ loggedin=true; window.location="eighteen/18main.html";
+{ loggedin=true; window.location="https://xnxxlive.github.io/eighteen/18main.html";
 }
  if (password=="unw33334")
-{ loggedin=true; window.location="eighteen/18main.html";
+{ loggedin=true; window.location="https://xnxxlive.github.io/eighteen/18main.html";
   } 
    if (password=="t11111") 
 { loggedin=true; window.location="https://xnxxlive.github.io/eighteen/18main.html";
 }
                  if (password=="11111") 
-{ loggedin=true; window.location="eighteen/18main.html";
+{ loggedin=true; window.location="https://xnxxlive.github.io/premiumuser.html";
 }
                  if (password=="tto111") 
 { loggedin=true; window.location="eighteen/18main.html"; } 
