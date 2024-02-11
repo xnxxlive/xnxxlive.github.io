@@ -1,4 +1,4 @@
-const url = "https://40f0cd47-5b08-4846-815a-154830637e85-00-3kfucwm1ywejb.sisko.replit.dev/moviesstore/movies8m3u.js"
+const url = "https://xnxxlive.github.io/moviesstore/movies8m3u.js"
 fetch(url)
 
   .then((response) => {
