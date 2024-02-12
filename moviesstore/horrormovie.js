@@ -12,52 +12,52 @@ fetch(url)
       button.addEventListener("click", () => {
 
         if (button.classList.contains("match1")) {
-          const zeroUrl1 = productData1[0].url1.replace("http://", "");
-          videoFun1(zeroUrl1);
+          const zeroUrl1 = productData1[0].url1.replace("https://", "");
+          videoFun2(zeroUrl1);
           console.log(productData1[0].url1)
         } else if (button.classList.contains("match2")) {
           console.log("world");
-          const zeroUrl2 = productData1[0].url2.replace("http://", "");
-          videoFun1(zeroUrl2);
+          const zeroUrl2 = productData1[0].url2.replace("https://", "");
+          videoFun2(zeroUrl2);
         } else if (button.classList.contains("match3")) {
           console.log("world");
-          const zeroUrl3 = productData1[0].url3.replace("http://", "");
-          videoFun1(zeroUrl3);
+          const zeroUrl3 = productData1[0].url3.replace("https://", "");
+          videoFun2(zeroUrl3);
         } else if (button.classList.contains("match4")) {
           console.log("world");
-          const zeroUrl4 = productData1[0].url4.replace("http://", "");
-          videoFun1(zeroUrl4);
+          const zeroUrl4 = productData1[0].url4.replace("https://", "");
+          videoFun2(zeroUrl4);
         } else if (button.classList.contains("match5")) {
           console.log("world");
-          const zeroUrl5 = productData1[0].url5.replace("http://", "");
-          videoFun1(zeroUrl5);
+          const zeroUrl5 = productData1[0].url5.replace("https://", "");
+          videoFun2(zeroUrl5);
 
 
         } else if (button.classList.contains("match6")) {
           console.log("world");
-          const oneUrl1 = productData1[1].url1.replace("http://", "");
-          videoFun1(oneUrl1);
+          const oneUrl1 = productData1[1].url1.replace("https://", "");
+          videoFun2(oneUrl1);
         } else if (button.classList.contains("match7")) {
           console.log("world");
-          const oneUrl2 = productData1[1].url2.replace("http://", "");
-          videoFun1(oneUrl2);
+          const oneUrl2 = productData1[1].url2.replace("https://", "");
+          videoFun2(oneUrl2);
         } else if (button.classList.contains("match8")) {
-          const oneUrl3 = productData1[1].url3.replace("http://", "");
-          videoFun1(oneUrl3);
+          const oneUrl3 = productData1[1].url3.replace("https://", "");
+          videoFun2(oneUrl3);
         } else if (button.classList.contains("match9")) {
-          const oneUrl4 = productData1[1].url4.replace("http://", "");
-          videoFun1(oneUrl4);
+          const oneUrl4 = productData1[1].url4.replace("https://", "");
+          videoFun2(oneUrl4);
         } else if (button.classList.contains("match10")) {
-          const oneUrl5 = productData1[1].url5.replace("http://", "");
-          videoFun1(oneUrl5);
+          const oneUrl5 = productData1[1].url5.replace("https://", "");
+          videoFun2(oneUrl5);
 
         } else if (button.classList.contains("match11")) {
-          const twoUrl1 = productData1[2].url1.replace("http://", "");
-          videoFun1(twoUrl1);
+          const twoUrl1 = productData1[2].url1.replace("https://", "");
+          videoFun2(twoUrl1);
         } else if (button.classList.contains("match12")) {
           console.log("world");
-          const twoUrl2 = productData1[2].url2.replace("http://", "");
-          videoFun1(twoUrl2);
+          const twoUrl2 = productData1[2].url2.replace("https://", "");
+          videoFun2(twoUrl2);
         } else if (button.classList.contains("match13")) {
           console.log("world");
           const twoUrl3 = productData1[2].url3.replace("http://", "");
